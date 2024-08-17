@@ -1,0 +1,182 @@
+.container {
+    display: flex;
+    align-items: center;
+}
+
+.text {
+  margin: 0; /* Remove default margin from paragraph */
+  margin-right: 8px; /* Optional: Space between text and icon */
+  font-size: 16px; /* Example font size */
+}
+
+.icon {
+  width: 25px; 
+  height: 25px;
+  margin-left: 100px;
+}
+
+.read-more-link {
+  display: inline-block; /* Allows margin and padding adjustments */
+  margin-top: 10px; /* Pushes the link down from the paragraph */
+  font-size: 16px; /* Adjust font size as needed */
+  color: #fff; /* Link color */
+  text-decoration: none; /* Removes the underline */
+  transition: color 0.3s ease; /* Smooth color transition on hover */
+   background-color: #f1356d;
+   border: 0;
+   padding: 8px;
+   border-radius: 8px;
+   cursor: pointer;
+}
+
+.read-more-link:hover {
+    color: #fff;
+    background-color: #c02856;
+}
+
+
+.header-container-inner {
+    width: 50%;
+    font-weight: 500;
+}
+
+.header-container-inner h1 {
+    font-size: 35px;
+}
+
+.header-container-inner p {
+    font-weight: 350;
+}
+
+.header-container {
+    width: 1200px;
+    position: absolute;
+
+    /* In relation to parent size*/
+    left: 50%;
+    top: 50%;
+
+    /* In relation to the ELEMENT size*/
+    transform: translate(-50%, -50%);
+
+}
+
+
+.btn:link,
+.btn:visited {
+    font-size: 20px;
+    font-weight: 600;
+    background-color: #f1356d;
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+    padding: 16px 32px;
+    border-radius: 9px;
+    margin-top: 50px;
+}
+
+.btn:hover {
+    color: #fff;
+    background-color: #c02856;
+}
+
+.horizontal-line {
+    border-top: 1px solid #f2f2f2; /* Border color and thickness */
+    position: fixed; /* Fix the position at the bottom */
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    padding-top: 35px;
+    margin-bottom: 20px;
+   
+}
+
+.horizontal-line a {
+    text-decoration: none;
+    /* color: #f2f2f2; */
+    /* color: #f1356d; */
+    padding-left: 30px;
+    font-size: large;
+    }
+
+.horizontal-line a:hover {
+    color: #f1356d;
+}
+
+aside {
+    text-align: left; 
+    margin: 0;        
+    padding: 0;       
+    width: 100%;     
+    max-width: 800px;
+    font-style: italic;
+}
+
+.aside-h1 {
+    font-size: 60px;
+    color: #f1356d;
+}
+.aside-h2 {
+    font-size: 20px;
+}
+
+aside .p1, .p2, .p3, .p4 {
+    font-size: 20px;
+}
+aside .p2, .p3, .p4 {
+    margin-top: 5px;
+}
+
+
+/* sign-up new blog form */
+.sign-up {
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.sign-up label {
+    text-align: left;
+    display: block;
+}
+
+.sign-up h2 {
+    font-size: 20px;
+    color: #f1356d;
+    margin-bottom: 30px;
+}
+
+.sign-up input {
+    width: 100%;
+    padding: 8px 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+    display: block;
+}
+
+.sign-up button {
+    background-color: #f1356d;
+    color: #fff;
+    border: 0;
+    padding: 10px 25px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.signin-link-container {
+    display: flex;
+    flex-direction: column; /* Ensures links are stacked vertically */
+    margin-top: 10px;
+}
+
+.signin-link {
+    margin-bottom: 10px; /* Adds space between links */
+    text-decoration: none; /* Removes underline from links */
+}
+
+.signin-link:hover {
+    text-decoration: underline; /* Underline on hover */
+}
