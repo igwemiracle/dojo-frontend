@@ -15,6 +15,7 @@ import AccountPage from './components/Account';
 import ForgotPassword from './components/ForgotPassword';
 import ResetPassword from './components/ResetPassword';
 import CreateBlog from './components/CreateBlog';
+import UpdateBlog from './components/Update';
 /**
  *    FIRST STEP to making use of the Router component:
  * We need to surround our whole application using the `Router` Component. And
@@ -60,6 +61,7 @@ const Main = () => {
                     <Route path="/story" element={<OurStory />} />
                     <Route path="/auth/forgot_password" element={<ForgotPassword />} />
                     <Route path="/auth/reset_password" element={<ResetPassword />} />
+                    <Route path="/auth/update/:id" element={<UpdateBlog />} />
                     <Route path="/auth/blogs/:id" element={<BlogDetails />} />
                     <Route path="/comment" element={<Comments />} />
                     <Route path="*" element={<NotFound />} />

@@ -57,8 +57,8 @@ const ForgotPassword = () => {
                         required
                         pattern="[^@]+@[^@]+.[a-zA-Z]{2,6}"
                     />
-                    {error && <p style={{ color: "red" }}>{error}</p>}
-                    {!isPending && <input className="forgot-pass-submit" type="submit" value="Verify Your Email" />}
+                    {error && <p style={{ color: "red", textAlign: "center", paddingBottom: "5px" }}>{error}</p>}
+                    {!isPending && <input style={{ marginTop: "10px" }} className="forgot-pass-submit" type="submit" value="Verify Your Email" />}
                     {isPending && <input disabled className="forgot-pass-submit" type="submit" value="Verifying..." />}
                 </form>
             </div>

@@ -1,14 +1,10 @@
 // How to make a component take in props-data and use that data inside that component.
 // In other words, we can also make it to be reuseable.
-import { Link, useNavigate } from "react-router-dom";
-import icon from '../assets/icons/comment-icon.png';
-import anotherIcon from '../assets/icons/delete-icon2.png';
-import { handleDelete } from './utils';
+import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 
 const BlogList = ({ title }) => {
     const [blogs, setBlogs] = useState([]);
-    const navigate = useNavigate();
     const formatDate = (dateString) => {
         const options = { year: 'numeric', month: 'long', day: 'numeric' };
         return new Date(dateString).toLocaleDateString('en-US', options);
@@ -54,15 +50,13 @@ const BlogList = ({ title }) => {
                         <Link to={`/auth/blogs/${blog.id}`} className="read-more-link">
                             Read More
                         </Link>
-                        <div className="container">
+                        <div>
                             <p className="text">Published on {formatDate(blog.date)}</p>
                         </div>
                         <Link to={'/comment'} className="icon-link">
-                            <img src={icon} alt="icon-notShowing" className="icon" />
+                            <i className="material-icons icon">comment</i>
                         </Link>
-                        <Link to={'#'} className="icon-link">
-                            <img src={anotherIcon} alt="icon-notShowing" className="icon" onClick={() => handleDelete(blog.id, navigate)} />
-                        </Link>
+
                     </div>
                 </div>
             ))}

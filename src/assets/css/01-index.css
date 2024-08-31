@@ -60,6 +60,8 @@
 /*====================================================================*/
 /* Styling for blog review */
 .blog_preview {
+width: 100%;
+box-sizing: border-box;
   padding-top: 35px;
   padding-left: 25px;
   margin-top: 15px;
@@ -78,6 +80,37 @@
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
+.blog_preview:hover .icon-link {
+  opacity: 1;
+}
+
+.blog_preview h3 {
+    color: #f1356d;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    overflow-wrap: break-word; /* Handle long words or strings */
+    word-wrap: break-word; /* For older browsers */
+}
+
+.blog_preview p {
+    margin: 10px 0; /* Margin around paragraphs */
+    line-height: 1.6; /* Improve readability */
+    overflow-wrap: break-word; /* Handle long words or strings */
+    word-wrap: break-word; /* For older browsers */
+}
+
+/* Style for input field */
+input[type="text"], textarea {
+    width: 100%; /* Ensure it fits within the blog_preview container */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Include padding and border in element's total width */
+    overflow-wrap: break-word; /* Handle long words or strings */
+    word-wrap: break-word; /* For older browsers */
+}
+
+
 .icon-link {
   position: absolute;
   top: 80%;
@@ -91,9 +124,6 @@
   right: 100px; /* Adjust the right property to position the second icon */
 }
 
-.blog_preview:hover .icon-link {
-  opacity: 1;
-}
 
 /*====================================================================*/
 
@@ -121,6 +151,27 @@
     background-color: #c02856;
 }
 
+
+.read-more-link {
+  display: inline-block; /* Allows margin and padding adjustments */
+  margin-top: 10px; /* Pushes the link down from the paragraph */
+  font-size: 16px; /* Adjust font size as needed */
+  color: #fff; /* Link color */
+  text-decoration: none; /* Removes the underline */
+  transition: color 0.3s ease; /* Smooth color transition on hover */
+   background-color: #f1356d;
+   border: 0;
+   padding: 8px;
+   border-radius: 8px;
+   cursor: pointer;
+}
+
+.read-more-link:hover {
+    color: #fff;
+    background-color: #c02856;
+}
+/*====================================================================*/
+
 /* blog-details page */
 .blog-details h2 {
     font-size: 20px;
@@ -140,6 +191,8 @@
     border-radius: 8px;
     cursor: pointer;
 }
+
+
 /*====================================================================*/
 
 /* create new blog form */
@@ -212,35 +265,8 @@
 .not-found a:hover {
   background-color: #c02856; /* Darker background on hover */
 }
-/*====================================================================*/
-.account {
-  text-align: center; /* Centers all text within the account section */
-  padding: 20px;
-}
 
-.account-h1 {
-  margin-bottom: 10px;
-}
 
-.account-p {
-  font-size: 16px;
-  margin-bottom: 20px;
-}
-
-.account-link {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color:#f1356d;
-  color: #fff;
-  text-decoration: none;
-  font-weight: bold;
-  border-radius: 5px;
-  margin-top: 20px;
-}
-
-.account-link:hover {
-  background-color:#c02856
-}
 
 
 .forgot-pass {
@@ -303,4 +329,103 @@ input[type="email"] {
 
 .forgot-pass-submit:hover {
     background-color: #e0245e; /* Darker shade on hover */
+}
+
+
+
+
+/*=================================================================================*/
+/* Account page specific styling */
+.account {
+  text-align: center; /* Centers all text within the account section */
+  padding: 20px;
+}
+
+.account-h1 {
+  margin-bottom: 10px;
+}
+
+.account-p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.account-link {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color:#f1356d;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+.account-link:hover {
+  background-color:#c02856
+}
+
+
+
+.account-blog-list p {
+    padding-top: 10px;
+    color: #555;
+    line-height: 1.6;
+    text-align: left;
+}
+
+.account-blog-list h3 {
+    color: #f1356d;
+    padding-right: 10px;
+    /* font-size: 1.5rem; */
+    text-align: left;
+}
+
+
+.account-blog-list .read-more-link {
+    margin-right: 437px;
+    margin-top: 10px; 
+}
+
+.read-more-link:hover {
+    color: #fff;
+    background-color: #c02856;
+}
+
+.blog_preview-account {
+    width: 100%;
+    padding-top: 35px;
+    padding-left: 20px;
+    margin-top: 15px;
+    border-radius: 8px;
+    padding-bottom: 15px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    position: relative;
+}
+
+.blog_preview-account h3 {
+    color: #f1356d;
+    margin-bottom: 10px;
+    
+    overflow-wrap: break-word; /* Handle long words or strings */
+    word-wrap: break-word; /* For older browsers */
+}
+.blog_preview-account p {
+    margin: 10px 0; /* Margin around paragraphs */
+    line-height: 1.6; /* Improve readability */
+    overflow-wrap: break-word; /* Handle long words or strings */
+    word-wrap: break-word; /* For older browsers */
+}
+
+.blog_preview-account a {
+  margin-top: 10px;
+}
+
+.blog_preview-account:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.blog_preview-account:hover .icon-link {
+  opacity: 1;
 }

@@ -48,8 +48,6 @@ const CreateBlog = () => {
         }
     }
 
-
-
     return (
         <div className="create">
             <h1>Add a New Blog</h1>

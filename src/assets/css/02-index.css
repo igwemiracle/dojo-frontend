@@ -15,33 +15,16 @@
   margin-left: 100px;
 }
 
-.read-more-link {
-  display: inline-block; /* Allows margin and padding adjustments */
-  margin-top: 10px; /* Pushes the link down from the paragraph */
-  font-size: 16px; /* Adjust font size as needed */
-  color: #fff; /* Link color */
-  text-decoration: none; /* Removes the underline */
-  transition: color 0.3s ease; /* Smooth color transition on hover */
-   background-color: #f1356d;
-   border: 0;
-   padding: 8px;
-   border-radius: 8px;
-   cursor: pointer;
-}
-
-.read-more-link:hover {
-    color: #fff;
-    background-color: #c02856;
-}
-
-
 .header-container-inner {
+    margin-left: 150px;
     width: 50%;
     font-weight: 500;
 }
 
 .header-container-inner h1 {
     font-size: 35px;
+    color: #f1356d;
+    font-weight: 400;
 }
 
 .header-container-inner p {
@@ -180,3 +163,4 @@ aside .p2, .p3, .p4 {
 .signin-link:hover {
     text-decoration: underline; /* Underline on hover */
 }
+/*===================================================================================*/
