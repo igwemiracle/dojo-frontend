@@ -24,17 +24,18 @@ const Navbar = () => {
 
     return (
         <nav className="navbar">
-            <Link to="/">
-                <img src={icon} alt="icon-notShowing" className="nav-icon" />
-            </Link>
-            <h1>Miracle Blog</h1>
+            <div className="miracle-icon">
+                <Link to="/">
+                    <img src={icon} alt="icon-notShowing" className="nav-icon" />
+
+                    <span style={{ color: "#f1356d", fontSize: "1.7rem", marginLeft: "14px", paddingTop: "15px" }}>Miracle Blog</span>
+                </Link>
+            </div>
             <div className="links">
                 {!username ? (
                     <>
                         {/* When not logged in show Home and Blogs */}
-                        {/* <Link to="/">Home</Link> */}
                         <Link to="/auth/blogs">Blogs</Link>
-
                     </>
                 ) : (<></>)}
 

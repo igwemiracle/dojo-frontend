@@ -1,0 +1,239 @@
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom/";
+
+const SignIn = () => {
+    const [username, setUserName] = useState('');
+    const [password, setPassword] = useState('');
+    const [confirmPassword, setConfirmPassword] = useState('');
+
+    const [email, setEmail] = useState('');
+    const [isPending, setIsPending] = useState(false);
+    const [error, setError] = useState("");
+    const navigate = useNavigate();
+    //==============================================================
+    const [isSignUp, setIsSignUp] = useState(false);
+    // Toggle between sign-in and sign-up
+
+    const handleSignUpClick = () => {
+        setIsSignUp(true); // Toggle to sign-up form
+    };
+    const handleSignInClick = () => {
+        setIsSignUp(false); // Toggle back to sign-in form
+    };
+    //==============================================================
+    const handleSubmitSignIn = async (e) => {
+        e.preventDefault();
+        setIsPending(true);
+
+        try {
+            const response = await fetch("http://localhost:8000/auth/login", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                    username: username,
+                    password: password,
+                }),
+            });
+
+            if (response.status === 200 || response.status === 201) {
+                // Handle success - for example, redirect to the account page
+                const data = await response.json();
+                // Store the username in localStorage
+                localStorage.setItem('username', username);
+                localStorage.setItem('access_token', data.access_token);
+                // console.log('Redirecting to:', data.redirect_url);
+                navigate(encodeURI(data.redirect_url));  // Redirect to the account page
+            } else {
+                // Handle errors
+                const data = await response.json();
+                console.log("Signin data =======> ", data)
+                setError(data.error_message || "Login failed.");
+            }
+        } catch (err) {
+            setError("An unexpected error occurred.");
+        } finally {
+            setIsPending(false);
+        }
+    };
+
+    const handleSubmitSignUp = async (e) => {
+        e.preventDefault();
+        setIsPending(true);
+        setError(null);
+
+        try {
+            const response = await fetch(`${process.env.REACT_APP_BASE_URL}/auth/register`, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                    username: username, email: email, password: password,
+                    confirm_password: confirmPassword,
+                }),
+            });
+
+            if (!response.ok) {
+                const errorData = await response.json();
+                throw new Error(errorData.error_message || "An unknown error occurred")
+            }
+
+            // Check if the response is JSON before parsing
+            const contentType = response.headers.get("content-type");
+            let data;
+            if (contentType && contentType.includes("application/json")) {
+                data = await response.json();
+                // Store the username in localStorage
+                localStorage.setItem("username", username);
+                localStorage.setItem('access_token', data.access_token);
+                //redirect or navigate to the account page
+                navigate(data.redirect_url);
+            } else {
+                throw new Error("Response is not JSON");
+            }
+            // Handle the data returned from the backend
+            return data;
+
+        } catch (err) {
+            setError(err.message);
+        } finally {
+            setIsPending(false);
+        }
+
+    };
+
+    return (
+        <div className="overall-container">
+            <div className="container">
+                <div className={`leftContainer ${isSignUp ? 'signUpPage' : 'signInPage'}`}>
+                    {/* <div className="leftContainer"> */}
+                    <div className="signInHeaderLeft">
+                        <p className="siginText">{isSignUp ? "Sign Up" : "Sign In"}</p>
+                    </div>
+                    <div className="formWrapper">
+                        {isSignUp ? (
+                            <form onSubmit={handleSubmitSignUp}>
+                                {/* Sign Up Form */}
+                                <div className="inputWrapper">
+                                    <label>Username</label>
+                                    <input
+                                        type="text"
+                                        placeholder="Username"
+                                        name="username"
+                                        required
+                                        value={username}
+                                        onChange={(e) => setUserName(e.target.value)}
+                                    />
+                                </div>
+                                <div className="inputWrapper">
+                                    <label>Email</label>
+                                    <input
+                                        type="email"
+                                        placeholder="Email"
+                                        name="email"
+                                        required
+                                        value={email}
+                                        onChange={(e) => setEmail(e.target.value)}
+                                    />
+                                </div>
+                                <div className="inputWrapper">
+                                    <label>Password</label>
+                                    <input
+                                        type="password"
+                                        name="password"
+                                        placeholder="Password"
+                                        required
+                                        value={password}
+                                        onChange={(e) => setPassword(e.target.value)}
+                                    />
+                                </div>
+                                <div className="inputWrapper">
+                                    <label>Confirm Password:</label>
+                                    <input
+                                        placeholder="Password"
+                                        name="password"
+                                        type="password"
+                                        required
+                                        value={confirmPassword}
+                                        onChange={(e) => setConfirmPassword(e.target.value)}
+                                    />
+                                </div>
+                                {!isPending && <button type="submit">Sign Up</button>}
+                                {isPending && <button disabled>Signing up...</button>}
+                                {error && <p style={{ color: "red", marginTop: "9px" }}>{error}</p>}
+                            </form>
+                        ) : (
+                            <form onSubmit={handleSubmitSignIn}>
+                                {/* Sign In Form */}
+                                <div className="inputWrapper">
+                                    <label>Username</label>
+                                    <input
+                                        type="text"
+                                        name="username"
+                                        placeholder="Username"
+                                        required
+                                        value={username}
+                                        onChange={(e) => setUserName(e.target.value)}
+                                    />
+                                </div>
+                                <div className="inputWrapper">
+                                    <label>Password</label>
+                                    <input
+                                        type="password"
+                                        name="password"
+                                        placeholder="Password"
+                                        required
+                                        value={password}
+                                        onChange={(e) => setPassword(e.target.value)}
+                                    />
+                                </div>
+
+                                {!isPending && <button type="submit">Sign In</button>}
+                                {isPending && <button disabled>Signing in...</button>}
+                                {error && <p style={{ color: "red", textAlign: "center", marginTop: "15px" }}>{error}</p>}
+                            </form>
+                        )}
+                    </div>
+
+                    <div className="formFooterWrapper">
+                        {!isSignUp ? (
+                            <div>
+                                <input type="checkbox" id="check1" />
+                                <label className="rememberMe" htmlFor="check1">
+                                    Remember Me
+                                </label>
+                            </div>
+                        ) : null}
+                        <div>
+                            {!isSignUp ? (
+                                <Link className="forgotPass" to="/auth/forgot_password">
+                                    Forgot Password?
+                                </Link>
+                            ) : null}
+                        </div>
+                    </div>
+                </div>
+
+                <div className="rightContainer">
+                    <div className="itemsWrapper">
+                        <h1 className="welcomeText">Welcome to {isSignUp ? "Sign Up" : "Sign In"}</h1>
+                        <p className="dontHaveAcctText">
+                            {isSignUp ? "Already have an account?" : "Don't have an account?"}
+                        </p>
+                        <button
+                            className="signUpBtn"
+                            onClick={isSignUp ? handleSignInClick : handleSignUpClick}
+                        >
+                            {isSignUp ? "Sign In" : "Sign Up"}
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    );
+};
+
+export default SignIn;

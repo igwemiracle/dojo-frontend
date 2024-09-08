@@ -79,12 +79,10 @@ const UpdateBlog = () => {
         }
     };
 
-
     return (
         <div className="create">
             <h1>Add a New Blog</h1>
             <div className="form-style" style={{ marginTop: "40px" }}>
-                {/* the form tag handles the submit event */}
                 <form onSubmit={handleSubmit}>
                     <label>Blog title:</label>
                     <input

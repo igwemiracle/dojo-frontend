@@ -57,7 +57,7 @@ const AccountPage = () => {
                                     <Link to={`/auth/blogs/${blog.id}`} className="read-more-link">
                                         Read More
                                     </Link>
-                                    <div className="container">
+                                    <div className="date-container">
                                         <p className="text">Published on {formatDate(blog.date)}</p>
                                     </div>
                                     <Link to={'#'} className="icon-link" >

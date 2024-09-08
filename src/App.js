@@ -1,14 +1,13 @@
 import React from 'react';
-import { BrowserRouter as Router, useLocation, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
-import HomePage from './06-Home';
+import HomePage from './Home';
 import Blogs from './components/Blogs';
-// import Create from './components/Create';
 import Comments from './components/Comment';
 import BlogDetails from './components/BlogDetails';
 import NotFound from './components/NotFound';
 import OurStory from './components/OurStory';
-import backgroundImage from './assets/images/back-img3.jpg';
+// import backgroundImage from './assets/images/back-img3.jpg';
 import SignUp from './components/SignUp';
 import SignIn from './components/SignIn';
 import AccountPage from './components/Account';
@@ -36,18 +35,21 @@ function App() {
 }
 
 const Main = () => {
-    const location = useLocation();
-    const isHomePage = location.pathname === '/';
+    // const location = useLocation();
+    // const isHomePage = location.pathname === '/';
 
-    const homePageStyle = {
-        backgroundImage: `url(${backgroundImage})`,
-        backgroundSize: 'cover',
-        height: '100vh',
-        filter: "brightness(0.75)",
-    };
+    // const homePageStyle = {
+    //     backgroundImage: `url(${backgroundImage})`,
+    //     backgroundSize: 'cover',
+    //     height: '100vh',
+    //     width: '100vw',
+    //     minHeight: '100vh',
+    //     filter: "brightness(0.75)",
+    // };
 
     return (
-        <div style={isHomePage ? homePageStyle : {}} className="app">
+        <div className="app">
+            {/* <div style={isHomePage ? homePageStyle : {}} className="app"></div> */}
             <Navbar />
             <div className="content">
                 <Routes>

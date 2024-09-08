@@ -50,6 +50,7 @@ const ForgotPassword = () => {
                 <p className="forgot-pass-p">Please enter your email to verify it's you.</p>
                 <form onSubmit={handleSubmit}>
                     <input
+                        className="forgot-pass-input"
                         type="email"
                         name="userEmail"
                         value={email}

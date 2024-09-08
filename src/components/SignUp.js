@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const SignUp = () => {
     const [username, setUserName] = useState('');
@@ -11,7 +12,7 @@ const SignUp = () => {
     const [error, setError] = useState("");
     const navigate = useNavigate();
 
-    const handleSubmit = async (e) => {
+    const handleSubmitSignUp = async (e) => {
         e.preventDefault();
         setIsPending(true);
         setError(null);
@@ -58,47 +59,75 @@ const SignUp = () => {
     };
 
     return (
-        <div className="sign-up">
-            <h1>Register New User</h1>
-            <div className="edit-sign" style={{ marginTop: "40px" }}>
-                <form onSubmit={handleSubmit}>
-                    <label>Username:</label>
-                    <input
-                        name="username"
-                        type="text"
-                        required
-                        value={username}
-                        onChange={(e) => setUserName(e.target.value)}
-                    />
-                    <label>Email:</label>
-                    <input
-                        name="email"
-                        type="email"
-                        required
-                        value={email}
-                        pattern="[^@]+@[^@]+.[a-zA-Z]{2,6}"
-                        onChange={(e) => setEmail(e.target.value)}
-                    />
-                    <label>Password:</label>
-                    <input
-                        name="password"
-                        type="password"
-                        required
-                        value={password}
-                        onChange={(e) => setPassword(e.target.value)}
-                    />
-                    <label>Confirm Password:</label>
-                    <input
-                        name="confirmPassword"
-                        type="password"
-                        required
-                        value={confirmPassword}
-                        onChange={(e) => setConfirmPassword(e.target.value)}
-                    />
-                    {error && <p style={{ color: "red" }}>{error}</p>}
-                    {!isPending && <button type="submit">Sign Up</button>}
-                    {isPending && <button disabled>Signing up...</button>}
-                </form>
+        <div className="overall-container">
+            <div className="container">
+                <div className="leftContainer signUpPage">
+                    {/* <div className="leftContainer"> */}
+                    <div className="signInHeaderLeft">
+                        <p className="siginText">Sign Up</p>
+                    </div>
+                    <div className="formWrapper">
+                        <form onSubmit={handleSubmitSignUp}>
+                            {/* Sign Up Form */}
+                            <div className="inputWrapper">
+                                <label>Username</label>
+                                <input
+                                    type="text"
+                                    placeholder="Username"
+                                    name="username"
+                                    required
+                                    value={username}
+                                    onChange={(e) => setUserName(e.target.value)}
+                                />
+                            </div>
+                            <div className="inputWrapper">
+                                <label>Email</label>
+                                <input
+                                    type="email"
+                                    placeholder="Email"
+                                    name="email"
+                                    required
+                                    value={email}
+                                    onChange={(e) => setEmail(e.target.value)}
+                                />
+                            </div>
+                            <div className="inputWrapper">
+                                <label>Password</label>
+                                <input
+                                    type="password"
+                                    name="password"
+                                    placeholder="Password"
+                                    required
+                                    value={password}
+                                    onChange={(e) => setPassword(e.target.value)}
+                                />
+                            </div>
+                            <div className="inputWrapper">
+                                <label>Confirm Password:</label>
+                                <input
+                                    placeholder="Password"
+                                    name="password"
+                                    type="password"
+                                    required
+                                    value={confirmPassword}
+                                    onChange={(e) => setConfirmPassword(e.target.value)}
+                                />
+                            </div>
+                            {!isPending && <button type="submit">Sign Up</button>}
+                            {isPending && <button disabled>Signing up...</button>}
+                            {error && <p style={{ color: "red", marginTop: "9px" }}>{error}</p>}
+                        </form>
+                    </div>
+                </div>
+                <div className="rightContainer">
+                    <div className="itemsWrapper">
+                        <h1 className="welcomeText">Start Writing Today!</h1>
+                        <Link to="/auth/login" className="dontHaveAcctText">Already have an account?<button className="signUpBtn">
+                            Sign In
+                        </button></Link>
+
+                    </div>
+                </div>
             </div>
         </div>
     );

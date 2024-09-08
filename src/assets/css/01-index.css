@@ -1,9 +1,14 @@
 /* base styles */
 * {
     margin: 0;
-    font-family: 'Quicksand', Arial, sans-serif;
+    font-family: "Poppins", system-ui;
     color: #333;
     font-weight: lighter;
+}
+
+.miracle-icon{
+   margin-left: -150px;
+    
 }
 
 .navbar {
@@ -100,15 +105,15 @@ box-sizing: border-box;
 }
 
 /* Style for input field */
-input[type="text"], textarea {
-    width: 100%; /* Ensure it fits within the blog_preview container */
+/* input[type="text"], textarea {
+    width: 100%; 
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
-    box-sizing: border-box; /* Include padding and border in element's total width */
-    overflow-wrap: break-word; /* Handle long words or strings */
-    word-wrap: break-word; /* For older browsers */
-}
+    box-sizing: border-box; 
+    overflow-wrap: break-word; 
+    word-wrap: break-word; 
+} */
 
 
 .icon-link {
@@ -306,14 +311,24 @@ input[type="text"], textarea {
     text-align: center;
 }
 
-input[type="email"] {
+.forgot-pass-input{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 70px;
+    box-sizing: border-box;
+    background-color: #F2F2F2;
+}
+
+/* input[type="email"] {
     width: 100%;
     padding: 10px;
     margin-bottom: 20px;
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
-}
+} */
 
 .forgot-pass-submit {
     width: 100%; /* Full-width button */
