@@ -1,0 +1,57 @@
+.miracle-icon{
+   margin-left: -150px;
+    
+}
+
+.navbar {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    max-width: 600px;
+    margin: 0 auto;
+    border-bottom: 1px solid white;
+}
+
+.nav-icon {
+    width: 40px; 
+    height: 33px;
+    margin-left: 10px;
+    filter: invert(42%) sepia(59%) saturate(4258%) hue-rotate(323deg) brightness(95%) contrast(93%)
+}
+
+.navbar h1 {
+    color: #f1356d;
+}
+
+.navbar .links {
+    margin-left: auto;
+}
+
+.navbar a {
+    margin-left: 5px;
+    text-decoration: none;
+    padding: 6px;
+}
+
+.navbar a:hover {
+    color: #f1356d;
+}
+.add-blog {
+    background-color: #f1356d;
+    color: #fff;
+    border: 0;
+    padding: 8px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+.navbar a.add-blog:hover {
+    color: #fff;
+}
+
+.content {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+}
+

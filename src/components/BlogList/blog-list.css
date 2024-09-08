@@ -1,0 +1,56 @@
+/* Styling for blog list */
+.blog-list p {
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
+.blog-list h3 {
+    color: #f1356d;
+}
+
+.blog-list button {
+    background-color: #f1356d;
+    color: #fff;
+    border: 0;
+    padding: 8px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.blog-list button:hover {
+    background-color: #c02856;
+}
+
+
+.read-more-link {
+  display: inline-block; /* Allows margin and padding adjustments */
+  margin-top: 10px; /* Pushes the link down from the paragraph */
+  font-size: 16px; /* Adjust font size as needed */
+  color: #fff; /* Link color */
+  text-decoration: none; /* Removes the underline */
+  transition: color 0.3s ease; /* Smooth color transition on hover */
+   background-color: #f1356d;
+   border: 0;
+   padding: 8px;
+   border-radius: 8px;
+   cursor: pointer;
+}
+
+.read-more-link:hover {
+    color: #fff;
+    background-color: #c02856;
+}
+
+.icon-link {
+  position: absolute;
+  top: 80%;
+  right: 25px;
+  transform: translateY(-50%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.icon-link + .icon-link { /* This targets the second icon-link */
+  right: 100px; /* Adjust the right property to position the second icon */
+}

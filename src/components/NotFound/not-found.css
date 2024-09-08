@@ -1,0 +1,30 @@
+/* Styling for not-found */
+.not-found {
+  text-align: center; /* Center align text */
+  margin-top: 50px; /* Add margin to the top */
+}
+
+.not-found h2 {
+  font-size: 2em;
+  margin-bottom: 20px; /* Space between h2 and p */
+}
+
+.not-found p {
+  font-size: 1.2em;
+  margin-bottom: 30px; /* Space between p and Link */
+}
+
+.not-found a {
+  display: inline-block; 
+  padding: 10px 20px;
+  margin-top: 20px; 
+  background-color: #f1356d;
+  color: white; 
+  text-decoration: none;
+  border-radius: 5px; 
+  transition: background-color 0.3s;
+}
+
+.not-found a:hover {
+  background-color: #c02856; /* Darker background on hover */
+}

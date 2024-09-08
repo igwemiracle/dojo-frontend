@@ -1,8 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './assets/css/01-index.css';
-import './assets/css/02-index.css'
-import './assets/css/signin.css'
+import './components/Home/home.css'
+import './components/Account/account.css'
+import './components/ForgotPassword/forgot-pass.css'
+import './components/BlogDetails/blog-details.css'
+import './components/Navbar/navbar.css'
+import './components/BlogList/blog-list.css'
+import './components/NotFound/not-found.css'
+import './components/SignInSignUp/signin.css'
+import './components/CreateBlog/create.css'
+import './components/Comments/comments.css'
+import './components/OurStory/story.css'
 import App from './App';
 
 

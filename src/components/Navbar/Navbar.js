@@ -1,5 +1,5 @@
 import { Link, useNavigate } from 'react-router-dom';
-import icon from '../assets/icons/nav-icon.png';
+import icon from '../../assets/icons/nav-icon.png';
 
 const Navbar = () => {
     const username = localStorage.getItem('username');

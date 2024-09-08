@@ -1,0 +1,25 @@
+aside {
+    text-align: left; 
+    margin: 0;        
+    padding: 0;       
+    width: 100%;     
+    max-width: 800px;
+    font-style: italic;
+}
+
+.aside-h1 {
+    font-size: 60px;
+    color: #f1356d;
+}
+.aside-h2 {
+    font-size: 20px;
+}
+
+aside .p1, .p2, .p3, .p4 {
+    font-size: 20px;
+}
+aside .p2, .p3, .p4 {
+    margin-top: 5px;
+}
+
+

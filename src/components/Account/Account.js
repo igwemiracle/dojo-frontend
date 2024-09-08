@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
-import useFetch from "./useFetch";
-import { handleDelete } from './utils';
+import useFetch from "../Hooks/useFetch";
+import { handleDelete } from '../utils';
 import { useEffect, useState } from "react";
 
 const AccountPage = () => {

@@ -1,0 +1,117 @@
+/* Account page specific styling */
+* {
+    margin: 0;
+    font-family: "Poppins", system-ui;
+    color: #333;
+    font-weight: lighter;
+}
+
+.text {
+  margin: 0; 
+  margin-right: 8px;
+  font-size: 16px;
+}
+
+.date-container {
+    display: flex;
+    align-items: center;
+}
+
+.account {
+  text-align: center; /* Centers all text within the account section */
+  padding: 20px;
+}
+
+.account-h1 {
+  margin-bottom: 10px;
+}
+
+.account-p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.account-link {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color:#f1356d;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+.account-link:hover {
+  background-color:#c02856
+}
+
+
+.account-blog-list p {
+    padding-top: 10px;
+    color: #555;
+    line-height: 1.6;
+    text-align: left;
+}
+
+.account-blog-list h3 {
+    color: #f1356d;
+    padding-right: 10px;
+    /* font-size: 1.5rem; */
+    text-align: left;
+}
+
+
+.account-blog-list .read-more-link {
+    margin-right: 437px;
+    margin-top: 10px; 
+}
+
+.read-more-link:hover {
+    color: #fff;
+    background-color: #c02856;
+}
+
+.icon {
+  width: 25px; 
+  height: 25px;
+  margin-left: 100px;
+}
+
+.blog_preview-account {
+    width: 100%;
+    padding-top: 35px;
+    padding-left: 20px;
+    margin-top: 15px;
+    border-radius: 8px;
+    padding-bottom: 15px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    position: relative;
+}
+
+.blog_preview-account h3 {
+    color: #f1356d;
+    margin-bottom: 10px;
+    
+    overflow-wrap: break-word; /* Handle long words or strings */
+    word-wrap: break-word; /* For older browsers */
+}
+.blog_preview-account p {
+    margin: 10px 0; /* Margin around paragraphs */
+    line-height: 1.6; /* Improve readability */
+    overflow-wrap: break-word; /* Handle long words or strings */
+    word-wrap: break-word; /* For older browsers */
+}
+
+.blog_preview-account a {
+  margin-top: 10px;
+}
+
+.blog_preview-account:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.blog_preview-account:hover .icon-link {
+  opacity: 1;
+}

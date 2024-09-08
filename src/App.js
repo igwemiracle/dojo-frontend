@@ -1,20 +1,20 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Navbar from './components/Navbar';
-import HomePage from './Home';
-import Blogs from './components/Blogs';
-import Comments from './components/Comment';
-import BlogDetails from './components/BlogDetails';
-import NotFound from './components/NotFound';
-import OurStory from './components/OurStory';
+import Navbar from './components/Navbar/Navbar';
+import HomePage from './components/Home/Home';
+import Blogs from './components/BlogList/Blogs';
+import Comments from './components/Comments/Comment';
+import NotFound from './components/NotFound/NotFound';
+import OurStory from './components/OurStory/OurStory';
 // import backgroundImage from './assets/images/back-img3.jpg';
-import SignUp from './components/SignUp';
-import SignIn from './components/SignIn';
-import AccountPage from './components/Account';
-import ForgotPassword from './components/ForgotPassword';
-import ResetPassword from './components/ResetPassword';
-import CreateBlog from './components/CreateBlog';
-import UpdateBlog from './components/Update';
+import SignUp from './components/SignInSignUp/SignUp';
+import SignIn from './components/SignInSignUp/SignIn';
+import ForgotPassword from './components/ForgotPassword/ForgotPassword';
+import ResetPassword from './components/ForgotPassword/ResetPassword';
+import CreateBlog from './components/CreateBlog/CreateBlog';
+import UpdateBlog from './components/CreateBlog/Update';
+import AccountPage from './components/Account/Account';
+import BlogDetails from './components/BlogDetails/BlogDetails';
 /**
  *    FIRST STEP to making use of the Router component:
  * We need to surround our whole application using the `Router` Component. And

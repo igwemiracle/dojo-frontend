@@ -2,7 +2,7 @@
 // This is simply making the logic of our code reuseable to avoid code repition,
 // Thereby externalizing each logic of our code into it's javascript file for reuseable purpose.
 import BlogList from "./BlogList";
-import useFetch from "./useFetch";
+import useFetch from "../Hooks/useFetch";
 
 
 const Blogs = () => {
