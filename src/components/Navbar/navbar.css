@@ -10,6 +10,7 @@
     max-width: 600px;
     margin: 0 auto;
     border-bottom: 1px solid white;
+    font-family: "Poppins", system-ui;
 }
 
 .nav-icon {
@@ -51,7 +52,6 @@
 
 .content {
     max-width: 600px;
-    margin: 40px auto;
+    margin: 40px 420px;
     padding: 20px;
 }
-

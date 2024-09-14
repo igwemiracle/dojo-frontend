@@ -36,3 +36,20 @@
     cursor: pointer;
     margin-top: 10px;
 }
+
+.title-input {
+    width: 100%; /* This makes it take up the full width of its container */
+    max-width: 600px; /* You can set a max-width to limit how wide it gets */
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    outline: none;
+}
+
+.title-input:focus {
+    border-color: #f1356d;
+    box-shadow: 2px 2px 8px rgba(241, 53, 109, 0.5);
+}
+

@@ -43,46 +43,39 @@ const AccountPage = () => {
     return (
         <div className="account">
             {error && <div>{error}</div>}
-            {isPending && <div>Is Loading...</div>}
-            {userBlogs.length > 0 && (
+            {userBlogs && isPending ? (
                 <>
-                    <h1 className="account-h1">Welcome, {username}! This is your account page.</h1>
-                    {/* Display the user's blogs */}
-                    <div className="account-blog-list" style={{ marginBottom: "50px" }}>
-                        {userBlogs.map((blog) => (
-                            <div className="blog_preview-account" key={blog.id}>
-                                <div className="account-container">
-                                    <h3>{blog.title}</h3>
-                                    <p>{truncate(blog.body, 70)}</p>
-                                    <Link to={`/auth/blogs/${blog.id}`} className="read-more-link">
-                                        Read More
-                                    </Link>
-                                    <div className="date-container">
-                                        <p className="text">Published on {formatDate(blog.date)}</p>
-                                    </div>
-                                    <Link to={'#'} className="icon-link" >
-                                        <i className="material-icons icon" onClick={() => handleDelete(blog.id, setBlog)}>delete</i>
-                                    </Link>
-                                    <Link to={`/auth/update/${blog.id}`} className="icon-link" >
-                                        <i className="material-icons icon">edit</i>
-                                    </Link>
-
+                    <p className="blog-list-load">Loading...</p>
+                </>
+            ) : <>
+                <h1 className="account-h1">Welcome, {username}! This is your account page.</h1>
+                <div className="account-blog-list">
+                    {userBlogs.map((blog) => (
+                        <div className="blog_preview-account" key={blog.id}>
+                            <div className="account-container">
+                                <h3>{blog.title}</h3>
+                                <p>{truncate(blog.body, 70)}</p>
+                                <Link to={`/auth/blogs/${blog.id}`} className="read-more-link">
+                                    Read More
+                                </Link>
+                                <div className="date-container">
+                                    <p className="text">Published on {formatDate(blog.date)}</p>
                                 </div>
+                                <Link to={'#'} className="icon-link" >
+                                    <i className="material-icons icon" onClick={() => handleDelete(blog.id, setBlog)}>delete</i>
+                                </Link>
+                                <Link to={`/auth/update/${blog.id}`} className="icon-link" >
+                                    <i className="material-icons icon">edit</i>
+                                </Link>
 
                             </div>
-                        ))}
-                    </div>
-                    <Link to="/auth/create_blog" className="account-link">Add blog</Link>
-                </>
-            )}
-            {userBlogs.length === 0 && !isPending && (
-                <>
-                    <p>No blogs found for {username}. Start by adding one!</p>
+
+                        </div>
+                    ))}
                     <Link to="/auth/create_blog" className="account-link">Add blog</Link>
 
-                </>
-
-            )}
+                </div>
+            </>}
         </div>
     );
 }

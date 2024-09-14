@@ -1,13 +1,15 @@
 .header-container-inner {
-    margin-left: 150px;
+    margin-left: 170px;
     width: 50%;
     font-weight: 500;
+    margin-bottom: 150px;
 }
 
 .header-container-inner h1 {
     font-size: 35px;
     color: #f1356d;
     font-weight: 400;
+
 }
 
 .header-container-inner p {
@@ -17,12 +19,9 @@
 .header-container {
     width: 1200px;
     position: absolute;
-
-    /* In relation to parent size*/
     left: 50%;
     top: 50%;
-
-    /* In relation to the ELEMENT size*/
+    margin-top: 50px;
     transform: translate(-50%, -50%);
 
 }
@@ -69,4 +68,111 @@
 .horizontal-line a:hover {
     color: #f1356d;
 }
+/*=====================================================================*/
+@media screen and (max-width: 912px) {
+    .navbar {
+        position: absolute;
+        left: 29%;
+        display: flex;
+        gap: 70px;
+        width: 50%;
+    }
 
+     .navbar .links {
+        position: absolute;
+        right: -35%;
+    }
+}
+
+@media screen and (max-width: 912px) {
+    .header-container-inner{
+        position: absolute;
+        left: 12%;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .navbar{
+        position: absolute;
+        right: 10%;
+        
+    }
+
+    .navbar .links {
+        position: absolute;
+        right: -40%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .header-container-inner{
+        position: absolute;
+        left: 15%;
+    }
+}
+
+@media screen and (max-width: 580px) {
+    .navbar{
+        position: absolute;
+        left: 45%;
+        display: flex;
+        width: 100%;
+        gap:60px;
+    }
+}
+
+
+@media screen and (max-width: 580px) {
+      .header-container-inner{
+        position: absolute;
+        left: 17%;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .navbar{
+        /* width: 200%; */
+        position: absolute;
+        right: -75%;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .header-container-inner{
+            position: absolute;
+            left:27%;
+    }
+    .header-container-inner p{
+        font-size: large;
+    font-family: "Poppins", system-ui;
+
+    }
+}
+
+@media screen and (max-width: 414px) {
+      .header-container-inner{
+        position: absolute;
+        left: 25%;
+    }
+}
+
+@media screen and (max-width: 430px) {
+      .header-container-inner{
+        position: absolute;
+        left: 25%;
+    }
+
+    .navbar .links {
+        position: absolute;
+        right: -20%;
+    }
+}
+
+@media screen and (max-width: 820px) {
+    .navbar {
+        position: absolute;
+        left: 25%;
+    }
+    
+}
+/*=====================================================================*/

@@ -1,22 +1,52 @@
 /* blog-details page */
+.blog-details {
+    max-width: 1000px;
+    margin: 20px auto;
+    margin-right: -100px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: 'Quicksand', Arial, sans-serif;
+    overflow: hidden;
+    position: absolute;
+    left: 27%;
+}
+
 .blog-details h2 {
-    font-size: 20px;
-    color: #f1356d;
-    margin-bottom: 10px;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+    line-height: 1.4; /* Add line height to handle multiple-line titles */
+    word-wrap: break-word; /* Ensures long words break properly */
+    overflow-wrap: break-word;
+    word-break: break-word;
 }
 
-.blog-details div {
-    margin: 20px 0;
+.blog-details-body {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    color: #555;
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-word;
 }
 
-.blog-details button {
-    background-color: #f1356d;
-    color: #fff;
-    border: 0;
-    padding: 8px;
-    border-radius: 8px;
-    cursor: pointer;
+.blog-details-body p {
+    margin-bottom: 15px;
 }
+
+.blog-details p {
+    font-size: 1rem;
+    color: #777;
+}
+
+article {
+    padding: 10px 0;
+}
+
 
 /*====================================================================*/
 /* Styling for blog review */

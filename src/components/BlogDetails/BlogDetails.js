@@ -13,10 +13,9 @@ const BlogDetails = () => {
             {blog && (
                 <article style={{ lineHeight: "20px" }}>
                     <h2> {blog.title} </h2>
-                    <div>{blog.body}</div>
-                    <p style={{
-                        paddingLeft: "70%"
-                    }}>Written by {blog.author}</p>
+                    <div>
+                        <p className="blog-details-body">{blog.body}</p>
+                        <p>Written by {blog.author}</p></div>
                 </article>
 
             )}

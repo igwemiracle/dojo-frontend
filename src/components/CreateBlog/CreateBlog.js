@@ -60,6 +60,7 @@ const CreateBlog = () => {
                         required
                         value={title}
                         onChange={(e) => setTitle(e.target.value)}
+                        className="title-input"
                     />
                     <label>Blog body:</label>
                     <textarea

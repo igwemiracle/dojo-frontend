@@ -1,9 +1,13 @@
 /* Account page specific styling */
 * {
     margin: 0;
-    font-family: "Poppins", system-ui;
+    /* font-family: "Poppins", system-ui; */
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    /* font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; */
+    /* font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; */
     color: #333;
-    font-weight: lighter;
+    font-weight:400;
+    font-size: 1.1rem;
 }
 
 .text {
@@ -20,10 +24,14 @@
 .account {
   text-align: center; /* Centers all text within the account section */
   padding: 20px;
+
 }
 
 .account-h1 {
-  margin-bottom: 10px;
+    font-size: 2rem;
+    position: absolute;
+    top: 15%;
+    right: 35%;
 }
 
 .account-p {
@@ -32,20 +40,27 @@
 }
 
 .account-link {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color:#f1356d;
-  color: #fff;
-  text-decoration: none;
-  font-weight: bold;
-  border-radius: 5px;
-  margin-top: 20px;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color:#f1356d;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-top: 115px;
+    position: absolute;
+    left: 61%;
 }
 
 .account-link:hover {
   background-color:#c02856
 }
 
+.account-blog-list{
+    margin-bottom: 50px;
+    float: right;
+    
+}
 
 .account-blog-list p {
     padding-top: 10px;
@@ -79,14 +94,15 @@
 }
 
 .blog_preview-account {
-    width: 100%;
+    width: 120%;
     padding-top: 35px;
     padding-left: 20px;
-    margin-top: 15px;
-    border-radius: 8px;
     padding-bottom: 15px;
+    margin-top: 80px;
+    margin-bottom: -75px;
+    margin-left: 95px;
+    border-radius: 8px;
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    position: relative;
 }
 
 .blog_preview-account h3 {
@@ -115,3 +131,142 @@
 .blog_preview-account:hover .icon-link {
   opacity: 1;
 }
+
+/*=====================================================================*/
+@media screen and (max-width: 1560px) {
+     *{
+        font-size: 1.3rem;
+    }
+.account-h1 {
+    font-size: 2rem; /* Adjust font size if needed */
+    text-align: center; /* Center the text horizontally */
+    white-space: normal; /* Allow text to wrap */
+    overflow-wrap: break-word; /* Force long words to break */
+    word-break: break-word; /* Support word breaking across different browsers */
+    width: 100%; /* Ensure the text takes full container width */
+    max-width: 100%; /* Prevent overflow */
+    position: absolute;
+    right: -2%;
+}
+.blog_preview-account{
+    margin-bottom: -45px;
+}
+.account-blog-list {
+    margin-right: 92px;
+    margin-top: 15px;
+}
+
+.account-link {
+
+    margin-top: 85px;
+    margin-left: 60px;
+}
+
+}  
+
+@media screen and (max-width: 1021px) {
+    .account-h1{
+        text-align: center; /* Center the text horizontally */
+        white-space: normal; /* Allow text to wrap */
+        overflow-wrap: break-word; /* Force long words to break */
+        word-break: break-word; /* Support word breaking across different browsers */
+        width: 50%; /* Ensure the text takes full container width */
+        max-width: 100%; /* Prevent overflow */
+        position: absolute;
+        right: 30%;
+    }
+
+    .account-blog-list{
+        margin-top: 80px;
+        margin-right: -95px;
+    }
+    .account-link {
+        white-space: nowrap; /* Prevents the text from breaking into a new line */
+        padding: 1rem 2rem; /* Adjust the padding to make space for larger text */
+        font-size: inherit; /* Ensure the button text uses the same font size as the rest of the page */
+        width: auto; /* Let the button width adjust automatically */
+        margin-left: -70px; 
+        margin-top: 70px; 
+}
+}
+
+@media screen and (max-width: 912px) {
+    .account-blog-list{
+        margin-top: 150px;
+        margin-right: -150px;
+    }
+
+    .account-link{
+        margin-left: 90px; 
+        margin-top: 85px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .account-h1{
+        width: 60%;
+        max-width: 100%;
+        position: absolute;
+        left: 25%;
+    }
+    .blog_preview-account{
+        width: 80%;
+    }
+    .account-blog-list{
+        margin-right: -250px;
+
+    }
+    .account-blog-list .read-more-link {
+        white-space: nowrap; /* Prevents the text from breaking into a new line */
+        font-size: inherit; /* Ensure the button text uses the same font size as the rest of the page */
+        width: auto; /* Let the button width adjust automatically */
+        /* margin-left: -70px;  */
+        margin-top: 7px; 
+}
+    .account-link{
+        margin-left: 20px; 
+        margin-top: 85px;
+    }
+}
+
+@media screen and (max-width: 580px) {
+     *{
+        font-size: 1.5rem;
+    }
+    .account-h1{
+        width: 100%;
+    }
+    .account-blog-list{
+        margin-top: 200px;
+    }
+       .account-blog-list{
+        margin-right: -350px;
+
+    }
+    .miracle-icon{
+        white-space: nowrap;
+        position: absolute;
+        left: 4%;
+    }
+    .text{
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .account-h1{
+        width: 70%;
+        margin-left: 200px;
+    }
+    .account-blog-list{
+        margin-top: 400px;
+    }
+
+}
+
+/* @media screen and (max-width: 414px) {
+}
+@media screen and (max-width: 430px) {
+}
+@media screen and (max-width: 820px) {
+} */
