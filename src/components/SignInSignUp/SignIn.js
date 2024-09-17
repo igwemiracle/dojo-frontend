@@ -46,7 +46,11 @@ const SignIn = () => {
             <div className="container">
                 <div className="leftContainer signInPage">
                     <div className="signInHeaderLeft">
-                        <p className="siginText">Sign In</p>
+                        <p class="siginText">Sign In</p>
+                        {/* <div class="socialsWrapper">
+                            <p class="icon">f</p>
+                            <p class="icon">t</p>
+                        </div> */}
                     </div>
                     <div className="formWrapper">
                         <form onSubmit={handleSubmitSignIn}>
@@ -96,10 +100,11 @@ const SignIn = () => {
 
                 <div className="rightContainer">
                     <div className="itemsWrapper">
-                        <h1 className="welcomeText">Sign Up to Create</h1>
-                        <Link to="/auth/register" className="dontHaveAcctText">don't have an account?<button className="signUpBtn">
+                        <h1 className="welcomeText">Don't Have Än Account?</h1>
+                        <Link to="/auth/register" className="dontHaveAcctText">Sign Up to Create<button className="signUpBtn">
                             Sign Up
                         </button></Link>
+
                     </div>
                 </div>
             </div>

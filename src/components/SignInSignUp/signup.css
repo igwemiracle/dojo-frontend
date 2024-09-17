@@ -1,0 +1,132 @@
+/* Container Styling
+.overall-container{
+    width: 240%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: -150px;
+    font-family: "Poppins", system-ui;
+
+    font-size: larger;
+    
+}
+
+.container{
+    width: 100%;
+    height: 750px;
+    background-color: #f1356d;
+    display: flex;
+    flex-direction: row;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    overflow: hidden;
+    margin-right: 100px;
+    margin-top: 100px;
+}
+
+.leftContainer{
+    flex-basis: 50%;
+    padding: 20rem 4rem;
+    background-color: #fff;
+    height: 650px;
+    padding: 4rem 3rem;
+}
+
+.signUpPage{
+    padding-top: 2rem;
+} 
+.signInHeaderLeft{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.siginText{
+    font-size: 32px;
+}
+
+
+.formWrapper{
+    margin-top: 2rem;
+}
+.inputWrapper{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+}
+label{
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+input{
+    padding: 1.2rem 1.5rem;
+    border-radius: 70px;
+    border: none;
+    background-color: #F2F2F2;
+    outline: none;
+}
+::placeholder {
+  color: #c4c2c2;
+
+}
+
+button{
+    width: 100%;
+    padding: 1.2rem 1.5rem;
+    border-radius: 70px;
+    border: none;
+    background-color: #f1356d;
+    color: white;
+    cursor: pointer;
+}
+.rememberMe{
+    text-transform: capitalize;
+    color: #f1356d;
+}
+input[type=checkbox]{
+    accent-color: #f1356d;
+}
+
+.formFooterWrapper{
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.forgotPass{
+    text-decoration: none;
+    color: #c4c2c2;
+}
+.rightContainer{
+    flex-basis: 50%;
+    padding: 4rem 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.itemsWrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.welcomeText{
+    color: white;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+.dontHaveAcctText{
+    color: white;
+    margin-bottom: 1rem;
+    text-decoration: none;
+    text-align: center;
+}
+.signUpBtn{
+    border: 1px solid white;
+    width: 60%;
+    text-align: center;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+ */

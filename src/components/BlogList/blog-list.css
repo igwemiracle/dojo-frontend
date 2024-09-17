@@ -1,13 +1,16 @@
 /* Styling for blog list */
 .blog-list{
     width: 750px;
-    position: absolute;
-    left: 27%;
+    /* position: absolute;
+    left: 27%; */
+    
 }
 
 .blog-list-load{
-    position: absolute;
-    left: 28%;
+    /* position: absolute;
+    left: -8%; */
+    margin-left: 200px;
+    text-align: center;
     font-size: 1.3rem;
 }
 
@@ -74,59 +77,4 @@
 
 .icon-link + .icon-link { /* This targets the second icon-link */
   right: 100px; /* Adjust the right property to position the second icon */
-}
-
-/*=====================================================================*/
-
-@media screen and (max-width: 912px) {
-    .blog-list {
-        /* margin-top: 80px; */
-        position: absolute;
-        left: 10%;
-        top: 15%;
-        bottom: 50%;
-    }
-    .navbar{
-        position: absolute;
-        left: 22%;
-    }
-    .blog-list-load {
-        margin-top: 85px;
-        position: absolute;
-        left: 8%;
-    }
-}
-@media screen and (max-width: 580px) {
-    .links {
-       position: absolute;
-       left: 80%;
-    }
-    .miracle-icon{
-        position: absolute;
-        right: 80%;
-    }
-}
-
-@media screen and (max-width: 375px) {
-    .blog-list{
-        position: absolute;
-        left: 20%;
-        top: 25%;
-    }
-}
-
-@media screen and (max-width: 430px) {
-    .miracle-icon{
-        position: absolute;
-        right: 69%;
-    }
-    .blog_preview{
-        width: 79%;
-    }
-}
-
-@media screen and (max-width: 820px) {
-        .blog_preview{
-        width: 79%;
-    }
 }

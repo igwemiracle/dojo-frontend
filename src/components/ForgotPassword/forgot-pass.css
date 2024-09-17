@@ -1,71 +1,181 @@
-.forgot-pass {
+/* Main container styling */
+.forgot-password-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 70vh;
-    background-color: #f0f0f5;
-    background-color:#f1356d;
+    height: 50vh;
+    background-color: #f9f9f9; /* Light gray background for the full page */
 }
 
-.forgot-pass-main {
-    background-color: #ffffff;
-    /* padding: 30px; */
-    margin-top: 300px;
-    padding-bottom: 200px;
-    padding-top: 200px;
-    padding-left: 30px;
-    padding-right:30px ;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 400px;
+/* Box styling */
+.forgot-password-box {
+    background-color: #fff; /* White background for form container */
+    padding: 40px 30px;
     width: 100%;
-    margin-bottom: 400px; /* Adjust this value to move the container further down */
-}
-
-
-.forgot-pass-h2 {
-    color: #333; /* Dark grey for the heading */
-    margin-bottom: 20px;
+    max-width: 400px; /* Limit width */
+    border-radius: 12px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
     text-align: center;
 }
 
-.forgot-pass-p {
-    color: #555; /* Medium grey for the paragraph */
-    margin-bottom: 20px;
-    text-align: center;
+/* Title styling */
+.forgot-password-title {
+    font-size: 1.8rem;
+    color: #f1356d; /* Your brand color */
+    margin-bottom: 15px;
 }
 
-.forgot-pass-input{
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
-    border-radius: 70px;
-    box-sizing: border-box;
-    background-color: #F2F2F2;
+/* Text description styling */
+.forgot-password-text {
+    font-size: 1rem;
+    color: #666; /* Soft gray for the description */
+    margin-bottom: 25px;
 }
 
-/* input[type="email"] {
+/* Input field styling */
+.forgot-password-input {
     width: 100%;
-    padding: 10px;
+    padding: 15px;
     margin-bottom: 20px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-} */
+    border-radius: 50px;
+    border: 1px solid #ccc; /* Light border */
+    background-color: #f2f2f2; /* Light input background */
+    font-size: 1rem;
+}
 
-.forgot-pass-submit {
-    width: 100%; /* Full-width button */
-    padding: 10px;
-    background-color: #f1356d; /* Submit button color */
+.forgot-password-input:focus {
+    outline: none;
+    border-color: #f1356d; /* Change border color on focus */
+    background-color: #fff; /* Highlight on focus */
+}
+
+/* Error message styling */
+.forgot-password-error {
+    color: red;
+    margin-top: 10px;
+    font-size: 0.9rem;
+}
+
+/* Submit button styling */
+.forgot-password-submit {
+    width: 100%;
+    padding: 12px 0;
+    border-radius: 50px;
+    background-color: #f1356d; /* Brand color */
     color: white;
+    font-size: 1rem;
     border: none;
-    border-radius: 4px;
     cursor: pointer;
-    font-size: 16px;
     transition: background-color 0.3s ease;
 }
 
-.forgot-pass-submit:hover {
-    background-color: #e0245e; /* Darker shade on hover */
+.forgot-password-submit:disabled {
+    background-color: #d3d3d3; /* Greyed out when disabled */
+    cursor: not-allowed;
+}
+
+.forgot-password-submit:hover {
+    background-color: #e0245e; /* Darken the button on hover */
+}
+
+
+
+/* Container Styling */
+.reset-password-container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 50px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.reset-password-title {
+    font-size: 1.8rem;
+    color: #f1356d;
+    margin-bottom: 20px;
+}
+
+.reset-password-info {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.reset-password-form-wrapper {
+    margin-top: 20px;
+}
+
+.reset-password-label {
+    font-size: 1rem;
+    color: #666;
+    display: block;
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.reset-password-input {
+    width: 100%;
+    padding: 12px 15px;
+    border-radius: 50px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    margin-bottom: 20px;
+    font-size: 1rem;
+}
+
+.reset-password-input:focus {
+    outline: none;
+    border-color: #f1356d;
+    background-color: #fff;
+}
+
+.reset-password-confirm-wrapper {
+    margin-top: 20px;
+}
+
+.reset-password-error {
+    color: red;
+    margin-top: 10px;
+}
+
+.reset-password-submit {
+    width: 100%;
+    padding: 12px 0;
+    background-color: #f1356d;
+    color: white;
+    font-size: 1rem;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.reset-password-submit:disabled {
+    background-color: #d3d3d3;
+    cursor: not-allowed;
+}
+
+.reset-password-submit:hover {
+    background-color: #e0245e;
+}
+
+
+
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .forgot-pass-main {
+        width: 85%;
+        padding: 30px 20px;
+    }
+
+    .forgot-pass-h2 {
+        font-size: 1.5rem;
+    }
+
+    .forgot-pass-p {
+        font-size: 0.9rem;
+    }
 }

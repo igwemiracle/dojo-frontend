@@ -71,13 +71,16 @@ const ResetPassword = () => {
     }
 
     return (
-        <div className="sign-up">
-            <h1 style={{ marginBottom: "10px" }}>Reset Password</h1>
-            <p>We've sent you an email with instructions to reset your password.</p>
-            <div style={{ marginTop: "40px" }}>
+        <div className="reset-password-container">
+            <h1 className="reset-password-title">Reset Password</h1>
+            <p className="reset-password-info">
+                We've sent you an email with instructions to reset your password.
+            </p>
+            <div className="reset-password-form-wrapper">
                 <form onSubmit={handleSubmit}>
-                    <label>New password:</label>
+                    <label className="reset-password-label">New password:</label>
                     <input
+                        className="reset-password-input"
                         name="new_password"
                         type="password"
                         required
@@ -85,9 +88,10 @@ const ResetPassword = () => {
                         onChange={(e) => setNewPassword(e.target.value)}
                     />
 
-                    <div style={{ paddingTop: "30px" }}>
-                        <label>Confirm password:</label>
+                    <div className="reset-password-confirm-wrapper">
+                        <label className="reset-password-label">Confirm password:</label>
                         <input
+                            className="reset-password-input"
                             name="confirm_password"
                             type="password"
                             required
@@ -95,12 +99,24 @@ const ResetPassword = () => {
                             onChange={(e) => setConfirmPassword(e.target.value)}
                         />
                     </div>
-                    {error && <p style={{ color: "red" }}>{error}</p>}
-                    {!isPending && <input className="forgot-pass-submit" type="submit" value="Reset Password" />}
-                    {isPending && <input disabled className="forgot-pass-submit" type="submit" value="Processing..." />}
+
+                    {error && <p className="reset-password-error">{error}</p>}
+
+                    {!isPending && (
+                        <input className="reset-password-submit" type="submit" value="Reset Password" />
+                    )}
+                    {isPending && (
+                        <input
+                            className="reset-password-submit"
+                            disabled
+                            type="submit"
+                            value="Processing..."
+                        />
+                    )}
                 </form>
             </div>
         </div>
+
     );
 }
 

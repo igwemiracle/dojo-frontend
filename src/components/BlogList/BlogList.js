@@ -54,7 +54,7 @@ const BlogList = ({ title }) => {
                             <p className="text">Published on {formatDate(blog.date)}</p>
                         </div>
                         <Link to={'/comment'} className="icon-link">
-                            <i className="material-icons icon">comment</i>
+                            <i style={{ color: "#333" }} className="material-icons icon">comment</i>
                         </Link>
 
                     </div>

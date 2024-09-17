@@ -62,10 +62,10 @@ const AccountPage = () => {
                                     <p className="text">Published on {formatDate(blog.date)}</p>
                                 </div>
                                 <Link to={'#'} className="icon-link" >
-                                    <i className="material-icons icon" onClick={() => handleDelete(blog.id, setBlog)}>delete</i>
+                                    <i style={{ color: "#333" }} className="material-icons icon" onClick={() => handleDelete(blog.id, setBlog)}>delete</i>
                                 </Link>
                                 <Link to={`/auth/update/${blog.id}`} className="icon-link" >
-                                    <i className="material-icons icon">edit</i>
+                                    <i style={{ color: "#333" }} className="material-icons icon">edit</i>
                                 </Link>
 
                             </div>

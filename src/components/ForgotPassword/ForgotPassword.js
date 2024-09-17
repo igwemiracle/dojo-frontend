@@ -44,26 +44,28 @@ const ForgotPassword = () => {
     }
 
     return (
-        <div className="forgot-pass">
-            <div className="forgot-pass-main">
-                <h2 className="forgot-pass-h2">Forgot Password</h2>
-                <p className="forgot-pass-p">Please enter your email to verify it's you.</p>
-                <form onSubmit={handleSubmit}>
+        <div className="forgot-password-container">
+            <div className="forgot-password-box">
+                <h2 className="forgot-password-title">Forgot Password</h2>
+                <p className="forgot-password-text">Please enter your email to verify it's you.</p>
+                <form onSubmit={handleSubmit} className="forgot-password-form">
                     <input
-                        className="forgot-pass-input"
+                        className="forgot-password-input"
                         type="email"
                         name="userEmail"
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
                         required
                         pattern="[^@]+@[^@]+.[a-zA-Z]{2,6}"
+                        placeholder="Enter your email"
                     />
-                    {error && <p style={{ color: "red", textAlign: "center", paddingBottom: "5px" }}>{error}</p>}
-                    {!isPending && <input style={{ marginTop: "10px" }} className="forgot-pass-submit" type="submit" value="Verify Your Email" />}
-                    {isPending && <input disabled className="forgot-pass-submit" type="submit" value="Verifying..." />}
+                    {error && <p className="forgot-password-error">{error}</p>}
+                    {!isPending && <input className="forgot-password-submit" type="submit" value="Verify Your Email" />}
+                    {isPending && <input className="forgot-password-submit" type="submit" value="Verifying..." disabled />}
                 </form>
             </div>
         </div>
+
     );
 }
 

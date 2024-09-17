@@ -1,178 +1,62 @@
-.header-container-inner {
-    margin-left: 170px;
-    width: 50%;
-    font-weight: 500;
-    margin-bottom: 150px;
-}
-
-.header-container-inner h1 {
-    font-size: 35px;
-    color: #f1356d;
-    font-weight: 400;
-
-}
-
-.header-container-inner p {
-    font-weight: 350;
+/* General Styles */
+.home {
+    height: 100vh;
 }
 
 .header-container {
-    width: 1200px;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    margin-top: 50px;
-    transform: translate(-50%, -50%);
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    text-align: center;
+    padding: 0 20px;
 }
 
+.header-container-inner {
+    max-width: 700px; /* Default width for larger screens */
+    width: 100%;
+    margin: 0 auto;
+}
 
-.btn:link,
-.btn:visited {
-    font-size: 20px;
+.header-container-inner h1 {
+    font-size: clamp(1.8rem, 5vw, 3rem); /* Responsive typography */
+    color: #f1356d;
+    font-weight: 400;
+}
+
+.header-container-inner p {
+    font-size: clamp(1rem, 2.5vw, 1.25rem); /* Responsive paragraph size */
+    font-weight: 350;
+    margin-top: 25px;
+}
+
+.btn {
+    font-size: clamp(1rem, 2.5vw, 1.25rem); /* Responsive button text */
     font-weight: 600;
     background-color: #f1356d;
     color: #fff;
     text-decoration: none;
     display: inline-block;
-    padding: 16px 32px;
+    padding: 12px 24px;
     border-radius: 9px;
     margin-top: 50px;
 }
 
 .btn:hover {
-    color: #fff;
     background-color: #c02856;
+    color: #fff;
 }
 
-.horizontal-line {
-    border-top: 1px solid #f2f2f2; /* Border color and thickness */
-    position: fixed; /* Fix the position at the bottom */
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    text-align: center;
-    padding-top: 35px;
-    margin-bottom: 20px;
-   
-}
-
-.horizontal-line a {
-    text-decoration: none;
-    /* color: #f2f2f2; */
-    /* color: #f1356d; */
-    padding-left: 30px;
-    font-size: large;
-    }
-
-.horizontal-line a:hover {
-    color: #f1356d;
-}
-/*=====================================================================*/
-@media screen and (max-width: 912px) {
-    .navbar {
-        position: absolute;
-        left: 29%;
-        display: flex;
-        gap: 70px;
-        width: 50%;
-    }
-
-     .navbar .links {
-        position: absolute;
-        right: -35%;
+/* Media Queries for Responsiveness */
+/* Mobile-first approach */
+@media (max-width: 768px) {
+    .header-container-inner {
+        width: 100%; /* Make sure it doesn't overflow */
     }
 }
 
-@media screen and (max-width: 912px) {
-    .header-container-inner{
-        position: absolute;
-        left: 12%;
+@media (min-width: 1024px) {
+    .header-container-inner {
+        width: 700px;
     }
 }
-
-@media screen and (max-width: 720px) {
-    .navbar{
-        position: absolute;
-        right: 10%;
-        
-    }
-
-    .navbar .links {
-        position: absolute;
-        right: -40%;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .header-container-inner{
-        position: absolute;
-        left: 15%;
-    }
-}
-
-@media screen and (max-width: 580px) {
-    .navbar{
-        position: absolute;
-        left: 45%;
-        display: flex;
-        width: 100%;
-        gap:60px;
-    }
-}
-
-
-@media screen and (max-width: 580px) {
-      .header-container-inner{
-        position: absolute;
-        left: 17%;
-    }
-}
-
-@media screen and (max-width: 375px) {
-    .navbar{
-        /* width: 200%; */
-        position: absolute;
-        right: -75%;
-    }
-}
-
-@media screen and (max-width: 375px) {
-    .header-container-inner{
-            position: absolute;
-            left:27%;
-    }
-    .header-container-inner p{
-        font-size: large;
-    font-family: "Poppins", system-ui;
-
-    }
-}
-
-@media screen and (max-width: 414px) {
-      .header-container-inner{
-        position: absolute;
-        left: 25%;
-    }
-}
-
-@media screen and (max-width: 430px) {
-      .header-container-inner{
-        position: absolute;
-        left: 25%;
-    }
-
-    .navbar .links {
-        position: absolute;
-        right: -20%;
-    }
-}
-
-@media screen and (max-width: 820px) {
-    .navbar {
-        position: absolute;
-        left: 25%;
-    }
-    
-}
-/*=====================================================================*/

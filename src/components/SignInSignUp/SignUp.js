@@ -60,8 +60,8 @@ const SignUp = () => {
 
     return (
         <div className="overall-container">
-            <div className="container">
-                <div className="leftContainer signUpPage">
+            <div className="container signUpPage">
+                <div className="leftContainer">
                     {/* <div className="leftContainer"> */}
                     <div className="signInHeaderLeft">
                         <p className="siginText">Sign Up</p>
@@ -105,7 +105,7 @@ const SignUp = () => {
                             <div className="inputWrapper">
                                 <label>Confirm Password:</label>
                                 <input
-                                    placeholder="Password"
+                                    placeholder="Confirm Password"
                                     name="password"
                                     type="password"
                                     required
@@ -121,8 +121,8 @@ const SignUp = () => {
                 </div>
                 <div className="rightContainer">
                     <div className="itemsWrapper">
-                        <h1 className="welcomeText">Start Writing Today!</h1>
-                        <Link to="/auth/login" className="dontHaveAcctText">Already have an account?<button className="signUpBtn">
+                        <h1 className="welcomeText">Already Have An Account?</h1>
+                        <Link to="/auth/login" className="dontHaveAcctText">Start Writing Today!<button className="signUpBtn">
                             Sign In
                         </button></Link>
 

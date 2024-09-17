@@ -1,74 +1,91 @@
-/* Container Styling */
 .overall-container{
-    width: 240%;
+    margin-top: 350px;
+    width: 80vw;
+    margin-left: -150px;
+    max-height: 20vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-left: -150px;
     font-family: "Poppins", system-ui;
-
-    font-size: larger;
-    
 }
 
-.container{
-    width: 100%;
-    height: 700px;
-    background-color: #f1356d;
+.container {
+    /* overflow: hidden; */
+    width: 150%;
+    background-color: white;
     display: flex;
     flex-direction: row;
+    margin-right: 250px;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-    overflow: hidden;
-
 }
 
-.leftContainer{
+.leftContainer {
     flex-basis: 50%;
-    padding: 20rem 4rem;
-    background-color: #fff;
-    height: 650px;
+    /* flex: 1; */
     padding: 4rem 3rem;
+    background-color: white;
+    /* overflow: hidden; */
 }
 
-.signUpPage{
-    padding-top: 2rem;
-} 
-.signInHeaderLeft{
+.signInHeaderLeft {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
+
 .siginText{
+    white-space: nowrap;
     font-size: 32px;
+    overflow: hidden;
+
 }
 
+.socialsWrapper{
+    display: flex;
+    
+}
 
-.formWrapper{
+.icon{
+    padding-left: -700px;
+    border: 1px solid #cfd7f7;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    /* overflow: hidden; */
+}
+
+.formWrapper {
     margin-top: 2rem;
 }
-.inputWrapper{
+
+.inputWrapper {
     display: flex;
     flex-direction: column;
     margin-bottom: 2rem;
 }
-label{
+
+label {
     text-transform: uppercase;
     font-weight: bold;
     margin-bottom: 0.5rem;
 }
-input{
+
+input {
     padding: 1.2rem 1.5rem;
     border-radius: 70px;
     border: none;
     background-color: #F2F2F2;
     outline: none;
 }
+
 ::placeholder {
   color: #c4c2c2;
-
 }
 
-button{
+button {
     width: 100%;
     padding: 1.2rem 1.5rem;
     border-radius: 70px;
@@ -77,31 +94,36 @@ button{
     color: white;
     cursor: pointer;
 }
+
 .rememberMe{
     text-transform: capitalize;
     color: #f1356d;
 }
+
 input[type=checkbox]{
-    accent-color: #f1356d;
+    accent-color: #FF4764;
 }
 
-.formFooterWrapper{
-    margin-top: 4rem;
+.formFooterWrapper {
+    margin-top: 2rem;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
-.forgotPass{
+
+.formFooterWrapper a {
     text-decoration: none;
-    color: #c4c2c2;
+    color: #333;
 }
-.rightContainer{
-    flex-basis: 50%;
+
+.rightContainer {
+    background-color: #f1356d;
     padding: 4rem 3rem;
-    /* min-height: 50vh; */
+    /* flex: 1; */
+    flex-basis: 50%;
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
 }
 
 .itemsWrapper{
@@ -110,25 +132,53 @@ input[type=checkbox]{
     align-items: center;
     justify-content: center;
 }
-.welcomeText{
-    /* text-align: center; */
-    color: white;
 
-    margin-bottom: 1rem;
-}
-.dontHaveAcctText{
-    /* text-align: center; */
+.welcomeText {
+    text-align: center;
+    font-size: 32px;
+    /* white-space: nowrap; */
     color: white;
     margin-bottom: 1rem;
-    text-decoration: none;
-    text-align: center;
 }
-.signUpBtn{
+
+.dontHaveAcctText{
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.signUpBtn {
+    margin-top: 15px;
+    /* padding: 2rem; */
     border: 1px solid white;
     width: 60%;
     text-align: center;
     cursor: pointer;
-    margin-top: 15px;
+    /* white-space: nowrap; */
+    /* overflow: hidden; */
 }
 
+@media screen and (max-width: 940px) {
+    .formFooterWrapper{
+    flex-direction: column;
+    text-align: center;
+    }
+    .rememberMe{
+    margin-bottom: 10px;
+    }
 
+}
+
+@media screen and (max-width: 768px) {
+.container{
+    margin-top: 400px;
+    flex-direction: column-reverse;
+}
+.rightContainer{
+    height: 100%;
+}
+.socialsWrapper {
+    display: inline;
+}
+}

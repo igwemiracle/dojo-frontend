@@ -15,6 +15,7 @@ import CreateBlog from './components/CreateBlog/CreateBlog';
 import UpdateBlog from './components/CreateBlog/Update';
 import AccountPage from './components/Account/Account';
 import BlogDetails from './components/BlogDetails/BlogDetails';
+
 /**
  *    FIRST STEP to making use of the Router component:
  * We need to surround our whole application using the `Router` Component. And

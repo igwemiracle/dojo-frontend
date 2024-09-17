@@ -1,25 +1,54 @@
-aside {
-    text-align: left; 
-    margin: 0;        
-    padding: 0;       
-    width: 100%;     
-    max-width: 800px;
-    font-style: italic;
+.our-story {
+    background-color: #f7f7f7;  /* Light background color */
+    padding: 4rem 2rem;  /* Add padding for spacing */
+    margin: 2rem auto;  /* Center the container */
+    max-width: 1200px;  /* Set a max-width for readability */
+    border-radius: 15px;  /* Rounded corners */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);  /* Soft shadow for depth */
 }
 
-.aside-h1 {
-    font-size: 60px;
-    color: #f1356d;
-}
-.aside-h2 {
-    font-size: 20px;
-}
-
-aside .p1, .p2, .p3, .p4 {
-    font-size: 20px;
-}
-aside .p2, .p3, .p4 {
-    margin-top: 5px;
+.our-story h1.aside-h1 {
+    font-size: 2.5rem;  /* Large font for impact */
+    color: #333;  /* Dark text color for contrast */
+    text-align: center;  /* Center the heading */
+    margin-bottom: 2rem;  /* Space below the heading */
+    font-weight: bold;  /* Make the heading bold */
 }
 
+.our-story aside {
+    line-height: 1.8;  /* Improve readability by increasing line spacing */
+    color: #555;  /* Softer text color */
+}
 
+.our-story p {
+    font-size: 1.1rem;  /* Medium font size for body text */
+    margin-bottom: 1.5rem;  /* Space between paragraphs */
+}
+
+.our-story .p1, .our-story .p2, .our-story .p3, .our-story .p4 {
+    padding: 0.5rem;  /* Slight padding inside paragraphs for comfort */
+}
+
+.our-story h2.aside-h2 {
+    font-size: 2rem;  /* Slightly smaller than the main heading */
+    color: #f1356d;  /* Highlight the subheading with a brand color */
+    margin-top: 2rem;  /* Space above the subheading */
+    margin-bottom: 1rem;  /* Space below the subheading */
+    text-align: center;  /* Center the subheading */
+    font-weight: bold;
+}
+
+@media screen and (max-width: 1024px) {
+    .our-story {
+        padding: 3rem 1rem;  /* Adjust padding for smaller screens */
+    }
+    .our-story h1.aside-h1 {
+        font-size: 2rem;  /* Reduce font size for smaller screens */
+    }
+    .our-story h2.aside-h2 {
+        font-size: 1.8rem;  /* Adjust subheading size */
+    }
+    .our-story p {
+        font-size: 1rem;  /* Adjust text size for smaller screens */
+    }
+}
