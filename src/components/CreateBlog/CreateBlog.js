@@ -50,25 +50,29 @@ const CreateBlog = () => {
 
     return (
         <div className="create">
-            <h1>Add a New Blog</h1>
+            {/* <h1>Add a New Blog</h1> */}
             <div className="form-style" style={{ marginTop: "40px" }}>
-                {/* the form tag handles the submit event */}
                 <form onSubmit={handleSubmit}>
-                    <label>Blog title:</label>
-                    <input
-                        type="text"
-                        required
-                        value={title}
-                        onChange={(e) => setTitle(e.target.value)}
-                        className="title-input"
-                    />
+                    <div class="input-container">
+                        <label for="title">Title:</label>
+                        <input
+                            placeholder="Enter your title here"
+                            id="title"
+                            name="title"
+                            type="text"
+                            required
+                            value={title}
+                            onChange={(e) => setTitle(e.target.value)}
+                        // className="title-input"
+                        />
+                    </div>
+
                     <label>Blog body:</label>
                     <textarea
                         required
                         value={body}
                         onChange={(e) => setBody(e.target.value)}
                     ></textarea>
-
                     {!isPending && <button>publish</button>}
                     {isPending && <button disabled>publishing...</button>}
                 </form>

@@ -68,44 +68,5 @@ const Navbar = () => {
             </div>
         </nav>
     );
-
-    // return (
-
-    //     <nav className="navbar">
-    //         <div className="miracle-icon">
-    //             <Link to="/">
-    //                 <img src={icon} alt="icon-notShowing" className="nav-icon" />
-
-    //                 <span style={{ color: "#f1356d", fontSize: "1.7rem", marginLeft: "14px", paddingTop: "15px" }}>Miracle Blog</span>
-    //             </Link>
-    //         </div>
-    //         <div className="links">
-    //             {!username ? (
-    //                 <>
-    //                     {/* When not logged in show Home and Blogs */}
-    //                     <Link to="/auth/blogs">Blogs</Link>
-    //                 </>
-    //             ) : (<></>)}
-
-    //             {username ? (
-    //                 <>
-    //                     {/* When logged in, always show Account and Logout */}
-    //                     {/* <Link to="/">Home</Link> */}
-    //                     <Link to="/auth/blogs">Blogs</Link>
-    //                     <Link to="/account">Account</Link>
-    //                     <Link to="/" onClick={handleLogout}>Logout</Link>
-    //                 </>
-    //             ) : (
-    //                 <>
-    //                     {/* When not logged in, show Login */}
-    //                     <Link to="/auth/login">Login</Link>
-    //                     <Link to="/auth/create_blog" className='add-blog'>Post</Link>
-    //                 </>
-    //             )}
-
-    //         </div>
-    //     </nav>
-    // );
 }
-
 export default Navbar;

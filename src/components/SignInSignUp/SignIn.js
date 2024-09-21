@@ -84,7 +84,7 @@ const SignIn = () => {
                     </div>
 
                     <div className="formFooterWrapper">
-                        <div>
+                        <div className="remember-check">
                             <input type="checkbox" id="check1" />
                             <label className="rememberMe" htmlFor="check1">
                                 Remember Me

@@ -136,7 +136,7 @@ input[type=checkbox]{
 .welcomeText {
     text-align: center;
     font-size: 32px;
-    /* white-space: nowrap; */
+    white-space: nowrap;
     color: white;
     margin-bottom: 1rem;
 }
@@ -154,20 +154,35 @@ input[type=checkbox]{
     border: 1px solid white;
     width: 60%;
     text-align: center;
-    cursor: pointer;
-    /* white-space: nowrap; */
-    /* overflow: hidden; */
+    cursor: pointer
 }
 
-@media screen and (max-width: 940px) {
-    .formFooterWrapper{
+@media screen and (max-width: 1370px) {
+.formFooterWrapper{
     flex-direction: column;
     text-align: center;
     }
-    .rememberMe{
+.rememberMe{
     margin-bottom: 10px;
     }
+}
 
+@media screen and (max-width: 1024px) {
+.signUpBtn{
+    width: 75%;
+    margin-top: 25px;
+    padding: 0.8rem;
+    }
+.leftContainer {
+    padding: 4rem 4.5rem;   
+}
+.formFooterWrapper{
+    flex-direction: column;
+    text-align: center;
+    }
+.rememberMe{
+    margin-bottom: 10px;
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -180,5 +195,8 @@ input[type=checkbox]{
 }
 .socialsWrapper {
     display: inline;
+}
+.navbar a {
+    color: #f1356d;
 }
 }
