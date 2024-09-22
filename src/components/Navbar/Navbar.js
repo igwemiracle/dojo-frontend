@@ -1,5 +1,6 @@
 import { Link, useNavigate } from 'react-router-dom';
 import icon from '../../assets/icons/nav-icon.png';
+import icon2 from '../../assets/icons/dropdown.png'
 
 const Navbar = () => {
     const username = localStorage.getItem('username');
@@ -21,52 +22,42 @@ const Navbar = () => {
             console.error("Logout failed:", error);
         }
     };
-    // <nav>
-    //     <div class="navbar">
-    //         <div class="logo"><a href="#">MiräcleBlög</a></div>
-    //         <ul class="menu">
-    //             <li><a href="#Blogs">Blogs</a></li>
-    //             <li><a href="#Login">Login</a></li>
-    //             <li><a href="#Post">Post</a></li>
-    //         </ul>
-    //     </div>
-    // </nav>
-
     return (
         <nav>
             <div className='navbar'>
-                <div className="logo"><Link className='nav-link' to="/">
-                    <img src={icon} alt="icon-notShowing" className="nav-icon" />
-                    <p>Miracle Blog</p></Link>
+                <div className="logo">
+                    <Link className='nav-link' to="/">
+                        <img src={icon} alt="icon-notShowing" className="nav-icon" />
+                        <p>Miracle Blog</p>
+                    </Link>
                 </div>
-                <ul className='menu'>
-                    {!username ? (
-                        <>
-                            {/* When not logged in show Home and Blogs */}
-                            <li><Link to="/auth/blogs">Blogs</Link></li>
-                        </>
-                    ) : (<></>)}
+                <div className="dropdown" style={{ float: "right" }}>
+                    {/* Dropdown button */}
+                    <img src={icon2} alt="icon-notShowing" className="nav-icon" />
+                    {/* <button className="dropbtn">Menu</button> */}
 
-                    {username ? (
-                        <>
-                            {/* When logged in, always show Account and Logout */}
-                            {/* <Link to="/">Home</Link> */}
-
-                            <li><Link to="/auth/blogs">Blogs</Link></li>
-                            <li><Link to="/account">Account</Link></li>
-                            <li><Link to="/" onClick={handleLogout}>Logout</Link></li>
-
-                        </>
-                    ) : (
-                        <>
-                            {/* When not logged in, show Login */}
-                            <li><Link to="/auth/login">Login</Link></li>
-                            <li><Link to="/auth/create_blog" className='add-blog'>Post</Link></li>
-                        </>
-                    )}
-                </ul>
+                    {/* Dropdown content */}
+                    <div className="dropdown-content">
+                        {!username ? (
+                            <>
+                                {/* When not logged in, show Blogs and Login */}
+                                <Link to="/auth/blogs">Blogs</Link>
+                                <Link to="/auth/login">Login</Link>
+                                <Link to="/auth/create_blog" className='add-blog'>Post</Link>
+                            </>
+                        ) : (
+                            <>
+                                {/* When logged in, show Blogs, Account, and Logout */}
+                                <Link to="/auth/blogs">Blogs</Link>
+                                <Link to="/account">Account</Link>
+                                <Link to="/" onClick={handleLogout}>Logout</Link>
+                            </>
+                        )}
+                    </div>
+                </div>
             </div>
         </nav>
+
     );
 }
 export default Navbar;
