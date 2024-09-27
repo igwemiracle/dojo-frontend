@@ -1,27 +1,19 @@
 .overall-container{
-    margin-top: 350px;
-    width: 80vw;
-    margin-left: -150px;
-    max-height: 20vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: "Poppins", system-ui;
+    min-height: 90vh;
+    min-width: 70vw;
 }
 
 .container {
-    /* overflow: hidden; */
-    width: 150%;
+    width: 100%;
     background-color: white;
     display: flex;
     flex-direction: row;
-    margin-right: 250px;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    margin-top: 200px;
 }
 
 .leftContainer {
     flex-basis: 50%;
-    /* flex: 1; */
     padding: 4rem 3rem;
     background-color: white;
     /* overflow: hidden; */
@@ -69,7 +61,7 @@
 
 label {
     text-transform: uppercase;
-    font-weight: bold;
+    font-weight:normal;
     margin-bottom: 0.5rem;
 }
 

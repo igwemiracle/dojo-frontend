@@ -52,7 +52,8 @@ const Main = () => {
         <div className="app">
             {/* <div style={isHomePage ? homePageStyle : {}} className="app"></div> */}
             <Navbar />
-            <div className="content">
+            {/* <div className="content"> */}
+            <div>
                 <Routes>
                     <Route path="/" element={<HomePage />} />
                     <Route path="/auth/blogs" element={<Blogs />} />

@@ -50,9 +50,10 @@ nav .navbar {
 }
 
 .content {
+    background-color: #212121;
     max-width: 600px;
-    margin: 40px 420px;
-    padding: 20px;
+    /* margin-top: 200px; */
+    /* padding: 200px; */
 }
 
 
