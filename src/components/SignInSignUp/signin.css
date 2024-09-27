@@ -1,6 +1,6 @@
 .overall-container{
     min-height: 90vh;
-    min-width: 70vw;
+    min-width: 60vw;
 }
 
 .container {
@@ -128,7 +128,7 @@ input[type=checkbox]{
 .welcomeText {
     text-align: center;
     font-size: 32px;
-    white-space: nowrap;
+    /* white-space: nowrap; */
     color: white;
     margin-bottom: 1rem;
 }
@@ -166,7 +166,7 @@ input[type=checkbox]{
     padding: 0.8rem;
     }
 .leftContainer {
-    padding: 4rem 4.5rem;   
+    padding: 4rem 3rem;   
 }
 .formFooterWrapper{
     flex-direction: column;
@@ -179,17 +179,21 @@ input[type=checkbox]{
 
 @media screen and (max-width: 768px) {
 .container{
-    margin-top: 400px;
+    margin-bottom: 90px;
+    margin-top: 200px;
     flex-direction: column-reverse;
 }
 .rightContainer{
     height: 100%;
 }
-.socialsWrapper {
-    display: inline;
-}
 }
 
-@media screen and (max-width: 375px) {
-    
+@media screen and (max-width: 500px) {
+.overall-container{
+    min-height: 90vh;
+    min-width: 20vw;
+}
+.container {
+    width: 75vw;
+}
 }
