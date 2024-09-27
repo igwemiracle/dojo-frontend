@@ -44,10 +44,8 @@ body{
     color: white;
     border-radius: 50px 50px 0 0; /* Top curved, bottom flat */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    margin-bottom: 2rem;
+    margin-top: 10rem;
     margin-left: 8rem;
-    max-width: 90%;
-    width: 100%;
     word-break: break-word; /* Break long words */
 }
 

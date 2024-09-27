@@ -44,7 +44,7 @@ const SignIn = () => {
     return (
         <div className="overall-container">
             <div className="container">
-                <div className="leftContainer signInPage">
+                <div className="leftContainer">
                     <div className="signInHeaderLeft">
                         <p class="siginText">Sign In</p>
                         {/* <div class="socialsWrapper">

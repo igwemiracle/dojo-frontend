@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
+import icon from './images/forgotPass.svg';
 
 const ForgotPassword = () => {
     const [error, setError] = useState('');
@@ -43,29 +44,42 @@ const ForgotPassword = () => {
         }
     }
 
+
     return (
-        <div className="forgot-password-container">
-            <div className="forgot-password-box">
-                <h2 className="forgot-password-title">Forgot Password</h2>
-                <p className="forgot-password-text">Please enter your email to verify it's you.</p>
-                <form onSubmit={handleSubmit} className="forgot-password-form">
-                    <input
-                        className="forgot-password-input"
-                        type="email"
-                        name="userEmail"
-                        value={email}
-                        onChange={(e) => setEmail(e.target.value)}
-                        required
-                        pattern="[^@]+@[^@]+.[a-zA-Z]{2,6}"
-                        placeholder="Enter your email"
-                    />
-                    {error && <p className="forgot-password-error">{error}</p>}
-                    {!isPending && <input className="forgot-password-submit" type="submit" value="Verify Your Email" />}
-                    {isPending && <input className="forgot-password-submit" type="submit" value="Verifying..." disabled />}
-                </form>
+        <div className="forgotPasswordContainer">
+            <div className="forgotContainer">
+                <div className="forgotPasswordLeft">
+                    <div className="forgotHeaderLeft">
+                        <p class="forgotPassText">Forgot Password?</p>
+                    </div>
+                    <div className="forgotPassformWrapper">
+                        <form onSubmit={handleSubmit} >
+                            <div className="forgotInput">
+
+                                <input
+                                    className="forgot-password-input"
+                                    type="email"
+                                    name="userEmail"
+                                    value={email}
+                                    onChange={(e) => setEmail(e.target.value)}
+                                    required
+                                    pattern="[^@]+@[^@]+.[a-zA-Z]{2,6}"
+                                    placeholder="Enter your email"
+                                />
+                                {error && <p className="forgot-password-error">{error}</p>}
+                                {!isPending && <button className="forgotPasswordButton">Verify Your Email</button>}
+                                {isPending && <button className="forgotPasswordButton" disabled>Verifying...</button>}
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+                <div className="forgotRight forgotPasswordRight">
+                    <img src={icon} alt="not-showing" className="full-size-image" />
+
+                </div>
             </div>
         </div>
-
     );
 }
 

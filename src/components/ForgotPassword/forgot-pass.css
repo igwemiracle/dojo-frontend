@@ -1,41 +1,71 @@
-/* Main container styling */
-.forgot-password-container {
+/* Main container */
+.forgotPasswordContainer {
+    height: 100vh; /* Set to 100% of the viewport height */
+    width: 80vw;   /* Adjust to make it wider */
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 50vh;
-    background-color: #f9f9f9; /* Light gray background for the full page */
+    margin: 0 auto; /* Center the container */
 }
 
-/* Box styling */
-.forgot-password-box {
-    background-color: #fff; /* White background for form container */
-    padding: 40px 30px;
+/* Inner content container */
+.forgotContainer {
     width: 100%;
-    max-width: 400px; /* Limit width */
-    border-radius: 12px;
-    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    height: 70%; /* Adjusted height */
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+/* Left side (form) */
+.forgotPasswordLeft {
+    flex-basis: 50%;
+    padding: 4rem 3rem;
+    background-color: white;
+}
+
+.forgotPassText {
     text-align: center;
+    white-space: nowrap;
+    font-size: 35px;
+    overflow: hidden;
 }
 
-/* Title styling */
-.forgot-password-title {
-    font-size: 1.8rem;
-    color: #f1356d; /* Your brand color */
-    margin-bottom: 15px;
+/* Right side (image container) */
+.forgotRight {
+    flex-basis: 50%;
+    background-color: #f1356d;
+    position: relative;
+    overflow: hidden; /* To ensure image fits within the container */
 }
 
-/* Text description styling */
-.forgot-password-text {
-    font-size: 1rem;
-    color: #666; /* Soft gray for the description */
-    margin-bottom: 25px;
-}
-
-/* Input field styling */
-.forgot-password-input {
+.forgotPasswordRight {
+    background-color: #d3d3d3;
+    position: relative;
     width: 100%;
-    padding: 15px;
+    height: 100%; /* Adjust to fill the right container */
+    overflow: hidden; 
+}
+
+/* Image settings */
+.full-size-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the container without stretching */
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* Input and submit button styling (unchanged) */
+.forgotInput {
+    margin-top: 100px;
+}
+
+.forgot-password-input {
+    width: 95%;
+    padding: 1.2rem 1rem;
     margin-bottom: 20px;
     border-radius: 50px;
     border: 1px solid #ccc; /* Light border */
@@ -57,27 +87,14 @@
 }
 
 /* Submit button styling */
-.forgot-password-submit {
-    width: 100%;
-    padding: 12px 0;
-    border-radius: 50px;
-    background-color: #f1356d; /* Brand color */
-    color: white;
-    font-size: 1rem;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.forgot-password-submit:disabled {
+.forgotPasswordButton:disabled {
     background-color: #d3d3d3; /* Greyed out when disabled */
     cursor: not-allowed;
 }
 
-.forgot-password-submit:hover {
+.forgotPasswordButton:hover {
     background-color: #e0245e; /* Darken the button on hover */
 }
-
 
 
 /* Container Styling */
