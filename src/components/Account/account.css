@@ -10,6 +10,9 @@
 
 body{
     background: #F4F4F4;
+    display: flex;
+    justify-content:center ;
+    align-items: center;
     /* width: 80vw;
     max-height: 20vh; */
 }

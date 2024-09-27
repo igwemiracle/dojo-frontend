@@ -1,6 +1,7 @@
 /* Styling for blog list */
 .blog-list{
     width: 750px;
+    margin-top: 150px;
     /* position: absolute;
     left: 27%; */
     
@@ -9,7 +10,8 @@
 .blog-list-load{
     /* position: absolute;
     left: -8%; */
-    margin-left: 200px;
+    margin-top: 90px;
+    /* margin-left: 200px; */
     text-align: center;
     font-size: 1.3rem;
 }

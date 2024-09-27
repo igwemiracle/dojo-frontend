@@ -8,10 +8,12 @@ import './components/Navbar/navbar.css'
 import './components/BlogList/blog-list.css'
 import './components/NotFound/not-found.css'
 import './components/SignInSignUp/signin.css'
+
 import './components/CreateBlog/create.css'
 import './components/Comments/comments.css'
 import './components/OurStory/story.css'
 import './components/Footer/footer.css'
+import './components/SignInSignUp/signup.css'
 import App from './App';
 
 
