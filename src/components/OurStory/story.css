@@ -2,9 +2,12 @@
     background-color: #f7f7f7;  /* Light background color */
     padding: 4rem 2rem;  /* Add padding for spacing */
     margin: 2rem auto;  /* Center the container */
+    margin-top: 130px;
+    width: 70%;
     max-width: 1200px;  /* Set a max-width for readability */
     border-radius: 15px;  /* Rounded corners */
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);  /* Soft shadow for depth */
+    
 }
 
 .our-story h1.aside-h1 {

@@ -8,7 +8,18 @@ const BlogDetails = () => {
 
     return (
         <div className="blog-details">
-            {isPending && <div>Loading...</div>}
+            {isPending && <div className="blog-load">Loading...</div>}
+            {error && <div>{error}</div>}
+            {blog && (
+                <article className="blog-article">
+                    <h2> {blog.title} </h2>
+                    <div>
+                        <p className="blog-details-body">{blog.body}</p>
+                        <p>Written by {blog.author}</p></div>
+                </article>
+
+            )}
+            {/* {isPending && <div className="blog-load">Loading...</div>}
             {error && <div>{error}</div>}
             {blog && (
                 <article style={{ lineHeight: "20px" }}>
@@ -18,7 +29,7 @@ const BlogDetails = () => {
                         <p>Written by {blog.author}</p></div>
                 </article>
 
-            )}
+            )} */}
         </div>
     );
 }
