@@ -28,9 +28,9 @@
 
 .forgotPassText {
     text-align: center;
-    white-space: nowrap;
+    /* white-space: nowrap; */
     font-size: 35px;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 /* Right side (image container) */
@@ -196,7 +196,24 @@
 }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
+    .forgotContainer {
+        flex-direction: column-reverse;
+        margin-top: 100px;
+    }
+
+    .full-size-image {
+        width: 84%;
+        height: 85%;
+        top: 8%;
+        left: 8%;
+}
+}
+
+@media screen and (max-width: 769px) {
+/* @media screen and (max-width: 768px) { */
+/* @media screen and (max-width: 720px) { */
+
     .forgotContainer {
         flex-direction: column-reverse;
         margin-top: 100px;
@@ -211,7 +228,6 @@
         height: 50%;
     }
     .forgotPasswordRight {
-        /* margin-bottom: -50px; */
         height: 150%;
         min-height: 400px;
 
@@ -220,32 +236,39 @@
         margin-top: -10px;
     }
 }
-/* @media screen and (max-width: 1195px) {
-.forgotPasswordContainer{
-    min-height: 20vh;
-    margin-bottom: 200px;
-}
-.forgotContainer{
-    margin-top: 600px;
-    flex-direction: column-reverse;
-    width: 80%;
-}
-.forgotPasswordRight {
-    min-height: 90%;
-}
-}
 
-@media screen and (max-width: 1024px) {
-.forgotPasswordContainer{
-    min-height: 20vh;
-    margin-bottom: 50px;
+@media screen and (max-width: 500px) {
+    .forgotContainer {
+        margin-top: 350px;
+        
+    }
+    .forgotPasswordLeft{
+        min-height: 200px;
+    }
+    .forgotPasswordRight{
+        min-height: 250px;
+    }
+    .full-size-image {
+        width: 85%;
+        height: 90%;
+        left: 8%;
+        top: 8%;
+    }
+    .forgotPassText{
+        font-size: 25px;
+        position: absolute;
+        bottom: 30%;
+        left: 30%;
+    }
+    .forgot-password-input{
+        position: absolute;
+        bottom: 12%;
+        width: 40%;
+    }
+    .forgotPasswordButton {
+        position: absolute;
+        bottom: -2%;
+        width: 50%;
+    }
+  
 }
-.forgotContainer{
-    flex-direction: column-reverse;
-    width: 100%;
-}
-.forgotPasswordRight {
-    min-height: 90%;
-}
-}
- */
