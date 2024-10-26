@@ -28,7 +28,7 @@ const Navbar = () => {
                 <div className="logo">
                     <Link className='nav-link' to="/">
                         <img src={icon} alt="icon-notShowing" className="nav-icon" />
-                        <p>Miracle Blog</p>
+                        <p className='mira-para'>Miracle Blog</p>
                     </Link>
                 </div>
                 <div className="dropdown" style={{ float: "right" }}>

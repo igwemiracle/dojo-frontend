@@ -189,19 +189,32 @@
 /* Responsiveness */
 @media screen and (max-width: 1370px) { 
     .full-size-image {
-    width: 112%;
-    height: 65%;
-    top: 8%;
-    left: -4%;
+        width: 112%;
+        height: 65%;
+        top: 8%;
+        left: -4%;
 }
 }
 
 @media screen and (max-width: 1024px) {
+    .forgotPasswordContainer {
+        min-height: 100vh;
+    }
     .forgotContainer {
-        flex-direction: column-reverse;
         margin-top: 100px;
     }
-
+    .forgotInput {
+        position: absolute;
+        top: 33%;
+    }
+    .forgot-password-input {
+        width: 70%;
+        padding: 0.7rem 1rem;
+    }
+    .forgotPasswordButton {
+        padding: 0.7rem 1rem;
+        width: 80%;
+    }
     .full-size-image {
         width: 84%;
         height: 85%;
@@ -211,64 +224,71 @@
 }
 
 @media screen and (max-width: 769px) {
-/* @media screen and (max-width: 768px) { */
-/* @media screen and (max-width: 720px) { */
-
+    .forgotInput {
+        position: relative;
+        margin-left: 60px;
+    }
     .forgotContainer {
         flex-direction: column-reverse;
-        margin-top: 100px;
-    }
-    .full-size-image {
-        width: 85%;
-        height: 100%;
-        left: 14%;
-        top: -2%;
-    }
-    .forgotPasswordLeft{
-        height: 50%;
-    }
-    .forgotPasswordRight {
-        height: 150%;
-        min-height: 400px;
-
-    }
-    .forgot-password-input {
-        margin-top: -10px;
     }
 }
 
-@media screen and (max-width: 500px) {
+/* @media screen and (max-width: 500px) { */
+@media screen and (max-width: 430px) {
     .forgotContainer {
-        margin-top: 350px;
-        
-    }
-    .forgotPasswordLeft{
-        min-height: 200px;
-    }
-    .forgotPasswordRight{
-        min-height: 250px;
+        margin-top: 80px;
     }
     .full-size-image {
         width: 85%;
-        height: 90%;
+        height: 80%;
         left: 8%;
         top: 8%;
     }
-    .forgotPassText{
+    .forgotPassText {
         font-size: 25px;
-        position: absolute;
-        bottom: 30%;
-        left: 30%;
     }
-    .forgot-password-input{
+    .forgotInput {
         position: absolute;
-        bottom: 12%;
-        width: 40%;
+        left: 10%;
+        top: 54%;
+    }
+    .forgot-password-input {
+        width: 65%;
     }
     .forgotPasswordButton {
-        position: absolute;
-        bottom: -2%;
-        width: 50%;
+        width: 75%;
     }
   
+}
+
+@media screen and (max-width: 375px) {
+    .full-size-image {
+        width: 83%;
+        height: 90%;
+    }
+    .forgotPassText {
+        font-size: 20px;
+        position: absolute;
+        bottom: 45%;
+    }
+    .forgotInput {
+        margin-top: 50px;
+        margin-left: 35px;
+    }
+    .forgot-password-input {
+        padding: 0.4rem 1rem;
+        width: 62%;
+    }
+    .forgotPasswordButton {
+        padding: 0.4rem 1rem;
+        width: 75%;
+    }
+    .mira-para {
+        font-size: 20px;
+        color: aqua;
+    }
+    .nav-icon {
+        width: 50px;
+        height: 50px;
+    }
 }
