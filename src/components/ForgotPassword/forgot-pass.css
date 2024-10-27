@@ -279,7 +279,7 @@
 
 
 /* Tablets (721px - 1024px) */
-@media (min-width: 721px) and (max-width: 1024px) {
+/* @media (min-width: 721px) and (max-width: 1024px) {
     .forgotPasswordContainer {
         width: 80vw;
     }
@@ -297,17 +297,16 @@
     .forgotPasswordButton {
         font-size: 1.1rem;
     }
-}
+} */
 
 /* Tablets and Small Laptops (768px - 1024px) */
 @media (min-width: 768px) and (max-width: 1024px) {
     .forgotPasswordContainer {
-        width: 110vw;
+        width: 80vw;
     }
     .forgotContainer {
-        flex-direction: row-reverse;
-        margin-top: 50px;
-        height: 65%;
+        flex-direction: column-reverse;
+        height: 80%;
         width: 80%;
     }
     .forgotPasswordLeft {
@@ -315,9 +314,9 @@
     }
     .forgotPassText {
         /* margin-top: 60px; */
-        /* position: absolute;
-        left: 36%; */
-        font-size: 25px;
+        position: absolute;
+        left: 36%;
+        font-size: 33px;
     }
     .forgot-password-input{
         width: 92%;
