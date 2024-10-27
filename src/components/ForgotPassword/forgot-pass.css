@@ -186,109 +186,131 @@
 .reset-password-submit:hover {
     background-color: #e0245e;
 }
-/* Responsiveness */
-@media screen and (max-width: 1370px) { 
-    .full-size-image {
-        width: 112%;
-        height: 65%;
-        top: 8%;
-        left: -4%;
-}
-}
 
-@media screen and (max-width: 1024px) {
+/* Medium Smartphones (375px - 425px) */
+@media (min-width: 375px) and (max-width: 425px) {
     .forgotPasswordContainer {
-        min-height: 100vh;
+        width: 80vw;
+        height: 120vh;
     }
     .forgotContainer {
-        margin-top: 100px;
+        margin-top: 90px;
+        flex-direction: column-reverse;
+        height: 85%;
     }
-    .forgotInput {
-        position: absolute;
-        top: 33%;
+    .forgotPasswordLeft {
+        padding: 1.5rem 1.8rem;
     }
-    .forgot-password-input {
-        width: 70%;
-        padding: 0.7rem 1rem;
+    .forgotPassText {
+        font-size: 24px;
     }
+    .forgot-password-input{
+        width: 85%;
+    }
+    .forgot-password-input,
     .forgotPasswordButton {
-        padding: 0.7rem 1rem;
-        width: 80%;
+        font-size: 0.9rem;
     }
     .full-size-image {
-        width: 84%;
-        height: 85%;
-        top: 8%;
-        left: 8%;
-}
+        height: 250px;
+        position: absolute;
+        top: 17%;
+    }
 }
 
-@media screen and (max-width: 769px) {
-    .forgotInput {
-        position: relative;
-        margin-left: 60px;
+/* Large Smartphones (426px - 720px, including 720x1600 screens like Tecno Camon 15 Air) */
+@media (min-width: 426px) and (max-width: 720px) {
+    .forgotPasswordContainer {
+        width: 80vw;
+        height: 100vh;
+        margin-top: 160px;
+        margin-bottom: 80px;
     }
     .forgotContainer {
         flex-direction: column-reverse;
+        height: 100%;
+    }
+    .forgotPasswordLeft {
+        padding: 3rem 2rem;
+    }
+    .forgotPassText {
+        font-size: 28px;
+    }
+
+    .forgot-password-input{
+        width: 92%;
+    }
+    .forgot-password-input,
+    .forgotPasswordButton {
+        font-size: 1rem;
     }
 }
 
-/* @media screen and (max-width: 500px) { */
-@media screen and (max-width: 430px) {
+
+/* Tablets (721px - 1024px) */
+@media (min-width: 721px) and (max-width: 1024px) {
+    .forgotPasswordContainer {
+        width: 900vw;
+    }
+}
+
+/* Tablets and Small Laptops (768px - 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .forgotPasswordContainer {
+        width: 80vw;
+    }
     .forgotContainer {
-        margin-top: 80px;
-    }
-    .full-size-image {
-        width: 85%;
+        flex-direction: column-reverse;
         height: 80%;
-        left: 8%;
-        top: 8%;
+        width: 80%;
+    }
+    .forgotPasswordLeft {
+        padding: 2rem;
     }
     .forgotPassText {
-        font-size: 25px;
-    }
-    .forgotInput {
+        /* margin-top: 60px; */
         position: absolute;
-        left: 10%;
-        top: 54%;
+        left: 36%;
+        font-size: 33px;
     }
-    .forgot-password-input {
-        width: 65%;
+    .forgot-password-input{
+        width: 92%;
     }
+    .forgot-password-input,
     .forgotPasswordButton {
-        width: 75%;
+        font-size: 1.1rem;
     }
-  
 }
 
-@media screen and (max-width: 375px) {
-    .full-size-image {
-        width: 83%;
-        height: 90%;
+/* Laptops and Desktops (1025px and above) */
+@media (min-width: 1025px) {
+    .forgotPasswordContainer {
+        width: 80vw;
+    }
+    .forgotContainer {
+        flex-direction: row-reverse;
+        height: 70%;
+    }
+    .forgotPasswordLeft {
+        padding: 4rem;
     }
     .forgotPassText {
-        font-size: 20px;
-        position: absolute;
-        bottom: 45%;
-    }
-    .forgotInput {
-        margin-top: 50px;
-        margin-left: 35px;
+        font-size: 35px;
     }
     .forgot-password-input {
-        padding: 0.4rem 1rem;
-        width: 62%;
+        width: 85%;
     }
+    .forgot-password-input,
     .forgotPasswordButton {
-        padding: 0.4rem 1rem;
-        width: 75%;
+        font-size: 1.2rem;
     }
-    .mira-para {
-        font-size: 20px;
-        color: aqua;
-    }
-    .nav-icon {
-        width: 50px;
-        height: 50px;
+    /* .full-size-image {
+        width: 100%;
+        height: 60%;
+    } */
+    .full-size-image {
+        height: 550px;
+        position: absolute;
+        top: 10%;
     }
 }
