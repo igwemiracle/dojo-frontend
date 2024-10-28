@@ -253,7 +253,7 @@
 @media (min-width: 426px) and (max-width: 720px) {
     .forgotPasswordContainer {
         width: 80vw;
-        height: 100vh;
+        height: 80vh;
         margin-top: 160px;
         margin-bottom: 80px;
     }
@@ -265,7 +265,7 @@
         padding: 3rem 2rem;
     }
     .forgotPassText {
-        font-size: 28px;
+        font-size: 38px;
     }
 
     .forgot-password-input{
