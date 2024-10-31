@@ -149,6 +149,53 @@ input[type=checkbox]{
     cursor: pointer
 }
 
+
+@media (max-width: 374px) {
+    .rightContainer {
+        padding: 3rem 0.3rem;
+    }
+    .leftContainer {
+        padding: 3rem 0.1rem;
+    }
+}
+
+
+@media (min-width: 375px) and (max-width: 425px) {
+    .rightContainer {
+        padding: 3rem 0.1rem;
+    }
+    .leftContainer {
+        padding: 3rem 0.3rem;
+    }
+}
+
+@media screen and (max-width: 500px) {
+.overall-container{
+    min-height: 90vh;
+    min-width: 20vw;
+}
+.container {
+    width: 75vw;
+}
+.leftContainer {
+        padding: 3rem 2rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+.container{
+    margin-bottom: 90px;
+    margin-top: 200px;
+    flex-direction: column-reverse;
+}
+.rightContainer{
+    height: 100%;
+}
+.leftContainer {
+        padding: 3rem 2rem;
+    }
+}
+
 @media screen and (max-width: 1370px) {
 .formFooterWrapper{
     flex-direction: column;
@@ -166,7 +213,8 @@ input[type=checkbox]{
     padding: 0.8rem;
     }
 .leftContainer {
-    padding: 4rem 3rem;   
+    /* padding: 4rem 3rem;    */
+    padding: 4rem 1.3rem; 
 }
 .formFooterWrapper{
     flex-direction: column;
@@ -177,32 +225,6 @@ input[type=checkbox]{
     }
 }
 
-@media screen and (max-width: 768px) {
-.container{
-    margin-bottom: 90px;
-    margin-top: 200px;
-    flex-direction: column-reverse;
-}
-.rightContainer{
-    height: 100%;
-}
-}
 
-@media screen and (max-width: 500px) {
-.overall-container{
-    min-height: 90vh;
-    min-width: 20vw;
-}
-.container {
-    width: 75vw;
-}
-}
 
-@media (min-width: 375px) and (max-width: 425px) {
-    .rightContainer {
-        padding: 3rem 0.1rem;
-    }
-    .leftContainer {
-        padding: 3rem 1.3rem;
-    }
-}
+
