@@ -277,28 +277,6 @@
     }
 }
 
-
-/* Tablets (721px - 1024px) */
-/* @media (min-width: 721px) and (max-width: 1024px) {
-    .forgotPasswordContainer {
-        width: 80vw;
-    }
-    .forgotContainer {
-        flex-direction: row-reverse;
-        height: 70%;
-    }
-    .forgotPasswordLeft {
-        padding: 3rem;
-    }
-    .forgotPassText {
-        font-size: 25px;
-    }
-    .forgot-password-input,
-    .forgotPasswordButton {
-        font-size: 1.1rem;
-    }
-} */
-
 /* Tablets and Small Laptops (768px - 1024px) */
 @media (min-width: 768px) and (max-width: 1024px) {
     .forgotPasswordContainer {

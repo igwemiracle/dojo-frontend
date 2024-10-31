@@ -70,7 +70,7 @@ const SignUp = () => {
                         <form onSubmit={handleSubmitSignUp}>
                             {/* Sign Up Form */}
                             <div className="inputWrapper">
-                                <label>Username</label>
+                                <label>Username:</label>
                                 <input
                                     type="text"
                                     placeholder="Username"
@@ -81,7 +81,7 @@ const SignUp = () => {
                                 />
                             </div>
                             <div className="inputWrapper">
-                                <label>Email</label>
+                                <label>Email:</label>
                                 <input
                                     type="email"
                                     placeholder="Email"
@@ -92,7 +92,7 @@ const SignUp = () => {
                                 />
                             </div>
                             <div className="inputWrapper">
-                                <label>Password</label>
+                                <label>Password:</label>
                                 <input
                                     type="password"
                                     name="password"

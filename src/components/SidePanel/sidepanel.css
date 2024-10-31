@@ -1,0 +1,75 @@
+.side-icon-container {
+    display: flex; 
+    margin-left: -80px;   
+}
+
+.nav-icon2{
+    width: 30px; 
+    height: 30px;
+    margin-top: 30px;
+    filter: invert(42%) sepia(59%) saturate(4258%) hue-rotate(323deg) brightness(95%) contrast(93%)
+}
+
+.nav-icon {
+    background-color: #00C78F;
+    padding: 5px;
+    border-radius: 9px;
+    width: 40px; 
+    height: 40px;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.nav-icon  {
+    filter: invert(100%) brightness(100%);
+}
+
+.sidepanel {
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    height: 250px;
+    top: 0;
+    left: 0;
+    background-color: #f1356d;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidepanel a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #F4F4F4;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidepanel a:hover {
+    color: #f1f1f1;
+}
+
+.sidepanel .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+}
+
+.openbtn {
+    width: 0;
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #111;
+    color: white;
+    color: #f1356d;
+    padding: 10px 15px;
+    border: none;
+    position: absolute;
+    left: 0;
+}
+
+.openbtn:hover {
+    background-color: #444;
+}

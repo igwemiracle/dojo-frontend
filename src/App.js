@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar/Navbar';
 import HomePage from './components/Home/Home';
@@ -15,6 +15,7 @@ import CreateBlog from './components/CreateBlog/CreateBlog';
 import UpdateBlog from './components/CreateBlog/Update';
 import AccountPage from './components/Account/Account';
 import BlogDetails from './components/BlogDetails/BlogDetails';
+import SidePanel from './components/SidePanel/SidePanel';
 
 /**
  *    FIRST STEP to making use of the Router component:
@@ -36,23 +37,25 @@ function App() {
 }
 
 const Main = () => {
-    // const location = useLocation();
-    // const isHomePage = location.pathname === '/';
+    const [isMobileView, setIsMobileView] = useState(false);
 
-    // const homePageStyle = {
-    //     backgroundImage: `url(${backgroundImage})`,
-    //     backgroundSize: 'cover',
-    //     height: '100vh',
-    //     width: '100vw',
-    //     minHeight: '100vh',
-    //     filter: "brightness(0.75)",
-    // };
+    useEffect(() => {
+        const checkScreenWidth = () => {
+            setIsMobileView(window.innerWidth >= 360 && window.innerWidth <= 435);
+        };
 
+        // Check initial screen size on mount
+        checkScreenWidth();
+
+        // Update state when screen resizes
+        window.addEventListener('resize', checkScreenWidth);
+
+        // Cleanup on component unmount
+        return () => window.removeEventListener('resize', checkScreenWidth);
+    }, []);
     return (
         <div className="app">
-            {/* <div style={isHomePage ? homePageStyle : {}} className="app"></div> */}
-            <Navbar />
-            {/* <div className="content"> */}
+            {isMobileView ? <SidePanel /> : <Navbar />}
             <div>
                 <Routes>
                     <Route path="/" element={<HomePage />} />

@@ -197,3 +197,12 @@ input[type=checkbox]{
     width: 75vw;
 }
 }
+
+@media (min-width: 375px) and (max-width: 425px) {
+    .rightContainer {
+        padding: 3rem 0.1rem;
+    }
+    .leftContainer {
+        padding: 3rem 1.3rem;
+    }
+}

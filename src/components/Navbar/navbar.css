@@ -1,24 +1,11 @@
-nav {
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 75px;
-    padding-bottom: 0.5rem;
-    border-bottom: 1px solid white;
-    background: #F4F4F4;;
-    z-index: 1000;
-}
-
-.icon-div {
-    display: flex;    
-}
-
-.nav-icon2{
-    width: 30px; 
-    height: 30px;
-    margin-top: 30px;
-    filter: invert(42%) sepia(59%) saturate(4258%) hue-rotate(323deg) brightness(95%) contrast(93%)
+/* Style for the overall navbar */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* padding: 15px; */
+    /* background: #F4F4F4;; */
+    border-bottom: 1px solid white
 }
 
 .nav-icon {
@@ -35,81 +22,34 @@ nav {
     filter: invert(100%) brightness(100%);
 }
 
-nav .navbar {
+/* Container for the navigation links */
+.nav-link-container {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 100%;
-    max-width: 90%;
-    margin: auto;
+    justify-content: center;
+    /* flex-grow: 1; */
 }
 
-.navbar a{
+/* Styling for each link */
+.nav-link {
+    display: flex;
+    gap: 20px; /* Spacing between each link */
+    font-size: 1.2em; /* Adjust for text size */
+}
+
+/* Optional: Additional styling for links */
+.nav-link a {
     text-decoration: none;
-    font-weight: 600;
-    color: #212121;
+    color: #333333; /* Adjust to your preferred link color */
+    padding: 8px;
 }
 
- .navbar a:hover {
+.nav-link a:hover {
     color: #f1356d;
 }
 
- .miracle-icon{
-   margin-left: -150px;
-    
-}
-
-.content {
-    background-color: #212121;
-    max-width: 600px;
-}
-
-.sidepanel {
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    height: 250px;
-    top: 0;
-    left: 0;
-    background-color: #f1356d;
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 60px;
-}
-
-.sidepanel a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #F4F4F4;
-    display: block;
-    transition: 0.3s;
-}
-
-.sidepanel a:hover {
-    color: #f1f1f1;
-}
-
-.sidepanel .closebtn {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-}
-
-.openbtn {
-    width: 0;
-    font-size: 20px;
-    cursor: pointer;
-    background-color: #111;
-    color: white;
-    color: #f1356d;
-    padding: 10px 15px;
-    border: none;
-    position: absolute;
-    left: 0;
-}
-
-.openbtn:hover {
-    background-color: #444;
+/* Icon alignment */
+.nav-icon {
+    width: 40px;
+    height: 40px;
+    margin-right: 150px; /* Space between icon and links */
 }

@@ -1,14 +1,10 @@
 import { Link, useNavigate } from 'react-router-dom';
 import icon from '../../assets/icons/nav-icon.png';
-import icon2 from '../../assets/icons/dropdown.png'
-import { useState } from 'react';
+// import icon2 from '../../assets/icons/dropdown.png'
 
 const Navbar = () => {
     const username = localStorage.getItem('username');
     const navigate = useNavigate();
-    const [panelWidth, setPanelWidth] = useState("0");
-    const openNav = () => setPanelWidth("250px");
-    const closeNav = () => setPanelWidth("0");
 
     const handleLogout = async () => {
         try {
@@ -26,45 +22,36 @@ const Navbar = () => {
             console.error("Logout failed:", error);
         }
     };
-
     return (
         <nav>
             <div className='navbar'>
-                <div className="icon-div ">
-                    <img src={icon2} onClick={openNav} alt="icon-notShowing" className="nav-icon2" />
+                <div>
                     <Link to="/">
                         <img src={icon} alt="icon-notShowing" className="nav-icon" />
                     </Link>
                 </div>
-
-                <div>
-                    <>
-                        <div id="mySidepanel" className="sidepanel" style={{ width: panelWidth }}>
-                            <Link to="#" className="closebtn" onClick={closeNav}>×</Link>
-                            {!username ? (
-                                <>
-                                    <Link to="/auth/create_blog" className='add-blog'>Post</Link>
-                                    <Link to="/auth/blogs">Blogs</Link>
-                                    <Link to="/auth/login">Login</Link>
-                                    <Link to="#">Contact</Link>
-                                </>
-                            ) :
-                                <>
-                                    {/* When logged in, show Blogs, Account, and Logout */}
-                                    <Link to="/auth/blogs">Blogs</Link>
-                                    <Link to="/account">Account</Link>
-                                    <Link to="/" onClick={handleLogout}>Logout</Link>
-                                </>}
-
-                        </div>
-                    </>
+                <div className='nav-link-container'>
+                    <div className='nav-link'>
+                        {!username ? (
+                            <>
+                                {/* When not logged in, show Blogs and Login */}
+                                <Link to="/auth/blogs">Blogs</Link>
+                                <Link to="/auth/login">Login</Link>
+                                <Link to="/auth/create_blog">Post</Link>
+                            </>
+                        ) : (
+                            <>
+                                {/* When logged in, show Blogs, Account, and Logout */}
+                                <Link to="/auth/blogs">Blogs</Link>
+                                <Link to="/account">Account</Link>
+                                <Link to="/" onClick={handleLogout}>Logout</Link>
+                            </>
+                        )}
+                    </div>
                 </div>
             </div>
         </nav>
 
     );
-
-
-
 }
 export default Navbar;
