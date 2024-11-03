@@ -1,7 +1,6 @@
 /* create new blog form */
 .create {
     margin: 0 auto;
-
     margin-top: 200px;
     max-width: 400px;
     text-align: center;
@@ -39,17 +38,6 @@
     margin-top: 10px;
 }
 
-/* .title-input {
-    width: 100%; 
-    max-width: 600px;
-    padding: 10px;
-    border: 2px solid #ccc;
-    border-radius: 5px;
-    font-size: 1.2rem;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-    outline: none;
-} */
-
 /* Container for label and input */
 .input-container {
   display: flex;
@@ -58,14 +46,6 @@
   width: 100%;
   max-width: 700px; /* Adjust this value for input field width */
   margin: 0 auto; /* Center the input container */
-}
-
-/* Label styling */
-.input-container label {
-  font-size: 1rem;
-  color: #333;
-  margin-bottom: 8px;
-  font-weight: bold;
 }
 
 /* Input field styling */
@@ -89,7 +69,6 @@
 /* Placeholder styling */
 .input-container input[type="text"]::placeholder {
   color: #ccc;
-  font-style: italic;
 }
 
 /* Remove border from top, left, and right */

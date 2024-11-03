@@ -9,6 +9,12 @@ const BlogList = ({ title }) => {
         const options = { year: 'numeric', month: 'long', day: 'numeric' };
         return new Date(dateString).toLocaleDateString('en-US', options);
     };
+    const truncate = (str, num) => {
+        if (str.length <= num) {
+            return str;
+        }
+        return str.slice(0, num) + "...";
+    };
 
 
     //fetch the blogs from the backend
@@ -32,12 +38,7 @@ const BlogList = ({ title }) => {
         };
         fetchBlog();
     }, [])
-    const truncate = (str, num) => {
-        if (str.length <= num) {
-            return str;
-        }
-        return str.slice(0, num) + "...";
-    };
+
 
     return (
         <div className="blog-list" style={{ marginBottom: "50px" }}>
@@ -56,7 +57,9 @@ const BlogList = ({ title }) => {
                         <Link to={'/comment'} className="icon-link">
                             <i style={{ color: "#333" }} className="material-icons icon">comment</i>
                         </Link>
-
+                        <Link to={`/profile/${blog.author}`} className="icon-link">
+                            <i style={{ color: "#333" }} className="material-icons icon">person</i>
+                        </Link>
                     </div>
                 </div>
             ))}

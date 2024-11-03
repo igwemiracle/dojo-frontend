@@ -50,11 +50,10 @@ const CreateBlog = () => {
 
     return (
         <div className="create">
-            {/* <h1>Add a New Blog</h1> */}
             <div className="form-style" style={{ marginTop: "40px" }}>
                 <form onSubmit={handleSubmit}>
                     <div class="input-container">
-                        <label for="title">Title:</label>
+                        <label for="title">Blog Title:</label>
                         <input
                             placeholder="Enter your title here"
                             id="title"
@@ -63,7 +62,6 @@ const CreateBlog = () => {
                             required
                             value={title}
                             onChange={(e) => setTitle(e.target.value)}
-                        // className="title-input"
                         />
                     </div>
 

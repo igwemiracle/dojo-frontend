@@ -105,6 +105,10 @@
     background-color: #e0245e; /* Darken the button on hover */
 }
 
+.forgotPass:hover {
+    color: #e0245e;
+}
+
 
 /* Container Styling */
 .reset-password-container {

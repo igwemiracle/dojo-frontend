@@ -81,16 +81,18 @@ const UpdateBlog = () => {
 
     return (
         <div className="create">
-            <h1>Add a New Blog</h1>
             <div className="form-style" style={{ marginTop: "40px" }}>
                 <form onSubmit={handleSubmit}>
-                    <label>Blog title:</label>
-                    <input
-                        type="text"
-                        required
-                        value={title}
-                        onChange={(e) => setTitle(e.target.value)}
-                    />
+                    <div className="input-container">
+                        <label for="title">Blog title:</label>
+                        <input
+                            placeholder="Re-Enter your title"
+                            type="text"
+                            required
+                            value={title}
+                            onChange={(e) => setTitle(e.target.value)}
+                        />
+                    </div>
                     <label>Blog body:</label>
                     <textarea
                         required

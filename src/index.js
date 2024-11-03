@@ -14,6 +14,7 @@ import './components/Comments/comments.css'
 import './components/OurStory/story.css'
 import './components/Footer/footer.css'
 import './components/SignInSignUp/signup.css'
+import './components/Profile/profile.css'
 import App from './App';
 
 

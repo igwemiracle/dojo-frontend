@@ -15,6 +15,7 @@ const Footer = () => {
                 <div className="footer-middle">
                     <ul>
                         <li><Link to="/story">Our Story</Link></li>
+                        <li><Link to="/profile">Profile</Link></li>
                         <li><Link to="/contact">Contact</Link></li>
                         <li><Link to="/privacy">Privacy Policy</Link></li>
                         <li><Link to="/terms">Terms of Service</Link></li>

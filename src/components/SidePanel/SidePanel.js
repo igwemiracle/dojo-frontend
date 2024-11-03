@@ -7,7 +7,7 @@ const SidePanel = () => {
     const username = localStorage.getItem('username');
     const navigate = useNavigate();
     const [panelWidth, setPanelWidth] = useState("0");
-    const openNav = () => setPanelWidth("250px");
+    const openNav = () => setPanelWidth("200px");
     const closeNav = () => setPanelWidth("0");
 
     const handleLogout = async () => {

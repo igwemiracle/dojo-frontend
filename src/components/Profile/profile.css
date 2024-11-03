@@ -1,0 +1,87 @@
+/* Profile Page Styling */
+.profile-page {
+    width: 100%;
+    min-height: 100vh;
+    min-width: 900px;
+    margin: 0 auto;
+    margin-top: 250px;
+    padding: 20px;
+    border-radius: 20px 20px 0 0; /* Rounded top */
+    border: 1px solid #f1356d;
+    border-bottom: none;
+    position: relative;
+    background-color: #F4F4F4;
+    padding-top: 100px;
+    
+}
+
+/* Wrapper to position the picture container */
+.profile-picture-wrapper {
+    position: absolute;
+    top: -75px;                   /* Adjust to overlap profile-page */
+    left: 50%;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(-50%);
+    z-index: 2;                   /* Layer above profile-page */
+    border: 3px solid #f1356d;    /* Outer border to match profile-page */
+    border-radius: 50%;           /* Rounded to match profile-picture */
+    background-color: #F4F4F4;
+}
+
+.profile-blogs {
+    width: 70%;
+}
+
+.profile-username{
+    text-align: center;
+    width: 20%;           /* Adjust the percentage or set a fixed value */
+    background-color: #f1356d;
+    color: #F4F4F4;
+    padding: 10px;        /* Add some padding for a better look */
+    margin: 0 auto;       /* Centers the paragraph if desired */
+    margin-top: 50px;
+    border-radius: 5px;
+}
+
+
+
+/* Tab header styling */
+.tab-header {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+    margin-top: 90px;
+    border-bottom: 1px solid #ddd;
+}
+
+.tab-label {
+    padding: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.tab-label.active {
+    color: #f1356d;
+    font-weight: bold;
+    border-bottom: 3px solid #f1356d;
+}
+
+/* Content sections */
+.tab-content {
+    padding: 20px;
+    background: #F4F4F4;
+}
+
+.posts-content, .about-content {
+    display: none;
+}
+
+.tab-content .posts-content,
+.tab-content .about-content {
+    display: block;
+}
