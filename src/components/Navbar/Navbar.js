@@ -35,7 +35,7 @@ const Navbar = () => {
               <>
                 {/* When not logged in, show Blogs and Login */}
                 <Link to="/auth/blogs">Blogs</Link>
-                <Link to="/auth/login">Login</Link>
+                <Link to="/auth/login">Sign In</Link>
                 <Link to="/auth/create_blog">Add blog</Link>
               </>
             ) : (
