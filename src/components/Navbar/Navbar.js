@@ -33,17 +33,17 @@ const Navbar = () => {
           <div className='nav-link'>
             {!username ? (
               <>
-                {/* When not logged in, show Blogs and Login */}
-                <Link to="/auth/blogs">Blogs</Link>
-                <Link to="/auth/login">Sign In</Link>
-                <Link to="/auth/create_blog">Add blog</Link>
+                { /* When not logged in, show Blogs, Sign In, and Add blog */}
+                <Link to="/auth/blogs">Miracle</Link>
+                <Link to="/auth/login">Miracle</Link>
+                <Link to="/auth/create_blog">Miracle</Link>
               </>
             ) : (
               <>
                 {/* When logged in, show Blogs, Account, and Logout */}
-                <Link to="/auth/blogs">Blogs</Link>
-                <Link to="/account">Account</Link>
-                <Link to="/" onClick={handleLogout}>Logout</Link>
+                <Link to="/auth/blogs">Miracle</Link>
+                <Link to="/account">Miracle</Link>
+                <Link to="/" onClick={handleLogout}>Miracle</Link>
               </>
             )}
           </div>
